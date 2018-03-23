@@ -1,0 +1,35 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.1 }
+
+\bibitem[Adams and Raubal 2009]{Adams2009Conceptual}
+\abntrefinfo{Adams and Raubal}{ADAMS; RAUBAL}{2009}
+{ADAMS, B.; RAUBAL, M. Conceptual space markup language (csml): Towards the
+  cognitive semantic web. In:  IEEE INTERNATIONAL CONFERENCE ON SEMANTIC
+  COMPUTING, 2009, Berkeley, USA. \textbf{Proceedings...} Washington, USA:
+  IEEE, 2009. p. 253–260.}
+
+\bibitem[Linden, Smith and York 2003]{Linden2003}
+\abntrefinfo{Linden, Smith and York}{LINDEN; SMITH; YORK}{2003}
+{LINDEN, G.; SMITH, B.; YORK, J. Amazon.com recommendations: item-to-item
+  collaborative filtering.
+\textbf{{IEEE} Internet Computing}, Institute of Electrical and Electronics
+  Engineers ({IEEE}), v.~7, n.~1, p. 76--80, jan 2003.}
+
+\bibitem[Rakesh, Lee and Reddy 2016]{Rakesh2016}
+\abntrefinfo{Rakesh, Lee and Reddy}{RAKESH; LEE; REDDY}{2016}
+{RAKESH, V.; LEE, W.-C.; REDDY, C.~K. Probabilistic group recommendation model
+  for crowdfunding domains. In:  \textbf{Proceedings of the Ninth {ACM}
+  International Conference on Web Search and Data Mining - {WSDM}
+  {\textquotesingle}16}. [S.l.]: {ACM} Press, 2016.}
+
+\bibitem[Schafer, Konstan and Riedl 2001]{Schafer2001}
+\abntrefinfo{Schafer, Konstan and Riedl}{SCHAFER; KONSTAN; RIEDL}{2001}
+{SCHAFER, J.~B.; KONSTAN, J.~A.; RIEDL, J. E-commerce recommendation
+  applications. In:  \textbf{Applications of Data Mining to Electronic
+  Commerce}. [S.l.]: Springer {US}, 2001. p. 115--153.}
+
+\end{thebibliography}

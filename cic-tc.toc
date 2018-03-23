@@ -1,0 +1,15 @@
+\select@language {english}
+\select@language {brazilian}
+\select@language {english}
+\select@language {brazilian}
+\select@language {english}
+\contentsline {chapter}{1~Introdu\IeC {\c c}\IeC {\~a}o}{9}{CHAPTER.1}
+\contentsline {section}{\numberline {1.1}Figuras e tabelas}{9}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Formato de Figuras}{10}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Classifica\IeC {\c c}\IeC {\~a}o dos etc.}{10}{subsection.1.1.2}
+\contentsline {subsubsection}{\numberline {1.1.2.1}Subsubse\IeC {\c c}\IeC {\~a}o}{10}{subsubsection.1.1.2.1}
+\contentsline {paragraph}{\numberline {1.1.2.1.1}Par\IeC {\'a}grafo}{11}{paragraph.1.1.2.1.1}
+\contentsline {section}{\numberline {1.2}Sobre as refer\IeC {\^e}ncias bibliogr\IeC {\'a}ficas}{11}{section.1.2}
+\contentsline {chapter}{2~Recommendation Algorithms}{12}{CHAPTER.2}
+\contentsline {chapter}{3~About Catarse}{13}{CHAPTER.3}
+\contentsline {chapter}{\xspace {}References}{14}{schapter.7}

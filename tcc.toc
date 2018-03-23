@@ -1,0 +1,16 @@
+\select@language {english}
+\select@language {brazilian}
+\select@language {english}
+\contentsline {chapter}{\xspace {}List of Abbreviations and Acronyms}{6}{schapter.3}
+\contentsline {chapter}{\xspace {}List of Figures}{7}{schapter.4}
+\contentsline {chapter}{\xspace {}Abstract}{8}{schapter.5}
+\select@language {brazilian}
+\contentsline {chapter}{\xspace {}Resumo}{9}{schapter.6}
+\select@language {english}
+\contentsline {chapter}{1~Introdu\IeC {\c c}\IeC {\~a}o}{10}{CHAPTER.1}
+\contentsline {section}{\numberline {1.1}Figuras e tabelas}{10}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Classifica\IeC {\c c}\IeC {\~a}o dos etc.}{10}{subsection.1.1.1}
+\contentsline {section}{\numberline {1.2}Sobre as refer\IeC {\^e}ncias bibliogr\IeC {\'a}ficas}{10}{section.1.2}
+\contentsline {chapter}{2~Recommendation Algorithms}{12}{CHAPTER.2}
+\contentsline {chapter}{3~About Catarse}{13}{CHAPTER.3}
+\contentsline {chapter}{\xspace {}References}{14}{schapter.7}
