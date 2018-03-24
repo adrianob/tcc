@@ -11,5 +11,7 @@
 \contentsline {paragraph}{\numberline {1.1.2.1.1}Par\IeC {\'a}grafo}{11}{paragraph.1.1.2.1.1}
 \contentsline {section}{\numberline {1.2}Sobre as refer\IeC {\^e}ncias bibliogr\IeC {\'a}ficas}{11}{section.1.2}
 \contentsline {chapter}{2~Recommendation Algorithms}{12}{CHAPTER.2}
-\contentsline {chapter}{3~About Catarse}{13}{CHAPTER.3}
-\contentsline {chapter}{\xspace {}References}{14}{schapter.7}
+\contentsline {section}{\numberline {2.1}Collaborative filtering}{12}{section.2.1}
+\contentsline {section}{\numberline {2.2}Content-based filtering}{13}{section.2.2}
+\contentsline {chapter}{3~About Catarse}{14}{CHAPTER.3}
+\contentsline {chapter}{\xspace {}References}{15}{schapter.7}

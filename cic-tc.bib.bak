@@ -2756,4 +2756,22 @@
   publisher = {Institute of Electrical and Electronics Engineers ({IEEE})},
 }
 
+@InProceedings{2012a,
+  title     = {Comparative Study of Collaborative Filtering Algorithms},
+  booktitle = {Proceedings of the International Conference on Knowledge Discovery and Information Retrieval},
+  year      = {2012},
+  publisher = {{SciTePress} - Science and and Technology Publications},
+  doi       = {10.5220/0004104001320137},
+}
+
+@InProceedings{Iaquinta2008,
+  author    = {Leo Iaquinta and Marco de Gemmis and Pasquale Lops and Giovanni Semeraro and Michele Filannino and Piero Molino},
+  title     = {Introducing Serendipity in a Content-Based Recommender System},
+  booktitle = {2008 Eighth International Conference on Hybrid Intelligent Systems},
+  year      = {2008},
+  month     = {sep},
+  publisher = {{IEEE}},
+  doi       = {10.1109/his.2008.25},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

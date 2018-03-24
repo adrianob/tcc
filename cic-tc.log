@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  23 MAR 2018 17:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  24 MAR 2018 16:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -839,45 +839,91 @@ Now handling font encoding PU ...
    defining Unicode char U+2026 (decimal 8230)
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
-)) (./cic-tc.aux)
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Package: algorithm2e 2013/01/06 v5.00 algorithms environments
+\c@AlgoLine=\count156
+\algocf@hangindent=\skip78
+
+********************************************************
+Package `algorithm2e' Release 5.1 -- october 19 2015 --
+- algorithm2e-announce@lirmm.fr mailing list for announcement about releases
+- algorithm2e-discussion@lirmm.fr mailing list for discussion about package
+subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
+- Author: Christophe Fiorio (christophe.fiorio@umontpellier.fr)
+********************************************************
+\skiptotal=\skip79
+\skiplinenumber=\skip80
+\skiprule=\skip81
+\skiphlne=\skip82
+\skiptext=\skip83
+\skiplength=\skip84
+\algomargin=\skip85
+\skipalgocfslide=\skip86
+\algowidth=\dimen158
+\inoutsize=\dimen159
+\inoutindent=\dimen160
+\interspacetitleruled=\dimen161
+\interspacealgoruled=\dimen162
+\interspacetitleboxruled=\dimen163
+\algocf@ruledwidth=\skip87
+\algocf@inoutbox=\box45
+\algocf@inputbox=\box46
+\AlCapSkip=\skip88
+\AlCapHSkip=\skip89
+\algoskipindent=\skip90
+\algocf@nlbox=\box47
+\algocf@hangingbox=\box48
+\algocf@untilbox=\box49
+\algocf@skipuntil=\skip91
+\algocf@capbox=\box50
+\algoheightruledefault=\skip92
+\algoheightrule=\skip93
+\algotitleheightruledefault=\skip94
+\algotitleheightrule=\skip95
+\c@algocfline=\count157
+\c@algocfproc=\count158
+\c@algocf=\count159
+\algocf@algoframe=\box51
+\algocf@algobox=\box52
+) (./cic-tc.aux)
 \openout1 = `cic-tc.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 105.
-LaTeX Font Info:    ... okay on input line 105.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 105.
-(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1ptm.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 107.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 105.
-
+(lastpage)             ! on input line 107.
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count156
-\scratchdimen=\dimen158
-\scratchbox=\box45
-\nofMPsegments=\count157
-\nofMParguments=\count158
+\scratchcounter=\count160
+\scratchdimen=\dimen164
+\scratchbox=\box53
+\nofMPsegments=\count161
+\nofMParguments=\count162
 \everyMPshowfont=\toks26
-\MPscratchCnt=\count159
-\MPscratchDim=\dimen159
-\MPnumerator=\count160
-\makeMPintoPDFobject=\count161
+\MPscratchCnt=\count163
+\MPscratchDim=\dimen165
+\MPnumerator=\count164
+\makeMPintoPDFobject=\count165
 \everyMPtoPDFconversion=\toks27
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -897,26 +943,26 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 105.
-Package tocstyle Info: prepare \l@part for redefinition on input line 105.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 107.
+Package tocstyle Info: prepare \l@part for redefinition on input line 107.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 105.
-Package tocstyle Info: prepare \l@chapter for redefinition on input line 105.
-Package tocstyle Info: prepare \l@section for redefinition on input line 105.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 107.
+Package tocstyle Info: prepare \l@chapter for redefinition on input line 107.
+Package tocstyle Info: prepare \l@section for redefinition on input line 107.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 105.
+(Font)              <12> on input line 107.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 105.
+(Font)              <8> on input line 107.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 105.
-Package tocstyle Info: prepare \l@subsection for redefinition on input line 105
+(Font)              <6> on input line 107.
+Package tocstyle Info: prepare \l@subsection for redefinition on input line 107
 .
 Package tocstyle Info: prepare \l@subsubsection for redefinition on input line 
-105.
-Package tocstyle Info: prepare \l@table for redefinition on input line 105.
-Package tocstyle Info: prepare \l@figure for redefinition on input line 105.
-\AtBeginShipoutBox=\box46
-Package hyperref Info: Link coloring ON on input line 105.
+107.
+Package tocstyle Info: prepare \l@table for redefinition on input line 107.
+Package tocstyle Info: prepare \l@figure for redefinition on input line 107.
+\AtBeginShipoutBox=\box54
+Package hyperref Info: Link coloring ON on input line 107.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -924,11 +970,11 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count162
+\c@section@level=\count166
 )
-LaTeX Info: Redefining \ref on input line 105.
-LaTeX Info: Redefining \pageref on input line 105.
-LaTeX Info: Redefining \nameref on input line 105.
+LaTeX Info: Redefining \ref on input line 107.
+LaTeX Info: Redefining \pageref on input line 107.
+LaTeX Info: Redefining \nameref on input line 107.
 
 (./cic-tc.out) (./cic-tc.out)
 \@outlinefile=\write3
@@ -976,7 +1022,7 @@ LaTeX Info: Redefining \nameref on input line 105.
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 131--136
+Underfull \hbox (badness 10000) in paragraph at lines 133--138
 
  []
 
@@ -984,9 +1030,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 131--136
 
 ]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 141.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 143.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 141.
+(babel)             in language  on input line 143.
  [4
 
 ] (./cic-tc.lof
@@ -1087,6 +1133,20 @@ text indent calculated (toc, 0): 18.0pt
 number indent calculated (toc, 0): 0.0pt
 text noindent (toc, 0): 39.0pt
 number noindent (toc, 0): 0.0pt
+number indent by \l@... (toc, 1):  18.0pt
+text indent by \l@... (toc, 1):  27.60004pt
+number indent by parent (toc, 1):  18.0pt
+text indent calculated (toc, 1): 21.0pt
+number indent calculated (toc, 1): 18.0pt
+text noindent (toc, 1): 39.0pt
+number noindent (toc, 1): 0.0pt
+number indent by \l@... (toc, 1):  18.0pt
+text indent by \l@... (toc, 1):  27.60004pt
+number indent by parent (toc, 1):  18.0pt
+text indent calculated (toc, 1): 21.0pt
+number indent calculated (toc, 1): 18.0pt
+text noindent (toc, 1): 39.0pt
+number noindent (toc, 1): 0.0pt
 number indent by \l@... (toc, 0):  0.0pt
 text indent by \l@... (toc, 0):  18.0pt
 number indent by parent (toc, 0):  0.0pt
@@ -1107,23 +1167,23 @@ number noindent (toc, 0): 0.0pt
 
  [8
 
-] <fig.pdf, id=132, 200.75pt x 216.81pt>
+] <fig.pdf, id=142, 200.75pt x 216.81pt>
 File: fig.pdf Graphic file (type pdf)
  <use fig.pdf>
-Package pdftex.def Info: fig.pdf used on input line 206.
+Package pdftex.def Info: fig.pdf used on input line 208.
 (pdftex.def)             Requested size: 96.0pt x 103.68054pt.
 
-Underfull \hbox (badness 1082) in paragraph at lines 246--247
+Underfull \hbox (badness 1082) in paragraph at lines 248--249
 []|\T1/ptm/m/n/12 Esta col-una fun-ciona como
  []
 
 
-Underfull \hbox (badness 5050) in paragraph at lines 246--247
+Underfull \hbox (badness 5050) in paragraph at lines 248--249
 \T1/ptm/m/n/12 um pará-grafo, tendo uma
  []
 
 
-Underfull \hbox (badness 3209) in paragraph at lines 246--247
+Underfull \hbox (badness 3209) in paragraph at lines 248--249
 \T1/ptm/m/n/12 margem definida em 5cm.
  []
 
@@ -1141,13 +1201,108 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [10] [11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 12
  []
 
 [12
 
-] (./cic-tc.bbl [13
+]
+! Undefined control sequence.
+l.327 \(similarity(\pmb
+                        x, \pmb y) = cos(\pmb x, \pmb y) = \frac {\pmb x \cd...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.327 \(similarity(\pmb x, \pmb
+                                y) = cos(\pmb x, \pmb y) = \frac {\pmb x \cd...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.327 \(similarity(\pmb x, \pmb y) = cos(\pmb
+                                              x, \pmb y) = \frac {\pmb x \cd...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.327 ...larity(\pmb x, \pmb y) = cos(\pmb x, \pmb
+                                                   y) = \frac {\pmb x \cdot ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \pmb 
+                x \cdot \pmb y
+l.327 ...cdot \pmb y}{||\pmb x|| \cdot ||\pmb y||}
+                                                  \)
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \pmb x \cdot \pmb 
+                             y
+l.327 ...cdot \pmb y}{||\pmb x|| \cdot ||\pmb y||}
+                                                  \)
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ||\pmb 
+                  x|| \cdot ||\pmb y||
+l.327 ...cdot \pmb y}{||\pmb x|| \cdot ||\pmb y||}
+                                                  \)
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ||\pmb x|| \cdot ||\pmb 
+                                   y||
+l.327 ...cdot \pmb y}{||\pmb x|| \cdot ||\pmb y||}
+                                                  \)
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[13pdfTeX warning (ext4): destination with the same identifier (name{algocf.1})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.336 \chapter
+              {About Catarse}] (./cic-tc.bbl
+Underfull \hbox (badness 10000) has occurred while \output is active
+\T1/ptm/m/n/10.95 14
+ []
+
+[14
 
 ]
 
@@ -1157,7 +1312,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.27   {\textquotesingle}16}
+l.33   {\textquotesingle}16}
                             . [S.l.]: {ACM} Press, 2016.}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1165,43 +1320,46 @@ or  <return>  to continue without it.
 
 ) 
 AED: lastpage setting LastPage
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-\T1/ptm/m/n/10.95 14
- []
-
-[14
+[15
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 325.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 325.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 356.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 356.
  (./cic-tc.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 325.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 325.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 356.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 356.
 Package rerunfilecheck Info: File `cic-tc.out' has not changed.
-(rerunfilecheck)             Checksum: 07B9B43DA0D2B8ABB5A287C2314CFEB5;2285.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 325.
- ) 
+(rerunfilecheck)             Checksum: E726BB4AECFE693114A08C4B3B8AB73A;2677.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 356.
+ )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 1061 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
- 19615 strings out of 492995
- 322759 string characters out of 6132704
- 399005 words of memory out of 5000000
- 22918 multiletter control sequences out of 15000+600000
+ 20461 strings out of 492995
+ 336497 string characters out of 6132704
+ 429566 words of memory out of 5000000
+ 23754 multiletter control sequences out of 15000+600000
  28828 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,11n,45p,10381b,500s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
-xlive/2017/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb></usr/l
-ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/loca
-l/texlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/
-2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf
--dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on cic-tc.pdf (14 pages, 89587 bytes).
+ 48i,15n,45p,10381b,2378s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc
+}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
+r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10
+.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/201
+7/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on cic-tc.pdf (15 pages, 127637 bytes).
 PDF statistics:
- 229 PDF objects out of 1000 (max. 8388607)
- 201 compressed objects within 3 object streams
- 46 named destinations out of 1000 (max. 500000)
- 126 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 267 PDF objects out of 1000 (max. 8388607)
+ 234 compressed objects within 3 object streams
+ 52 named destinations out of 1000 (max. 500000)
+ 142 words of extra memory for PDF output out of 10000 (max. 10000000)
 
