@@ -178,38 +178,38 @@
 \chapter{Introdução}
 No início dos tempos, Donald E. Knuth criou o \TeX. Algum tempo depois, Leslie Lamport criou o \LaTeX. Graças a eles, não somos obrigados a usar o Word nem o LibreOffice.
 
-\section{Figuras e tabelas}
+%% \section{Figuras e tabelas}
 
-Esta seção faz referência às Figuras~\ref{fig:estrutura},~\ref{fig:ex1} e~\ref{fig:ex2}, a título de exemplo. A primeira figura apresenta a estrutura de uma figura. A \emph{descrição} deve aparecer \textbf{acima} da figura. Abaixo da figura, deve ser indicado a origem da imagem, mesmo se essa for apenas os autores do texto.
+%% Esta seção faz referência às Figuras~\ref{fig:estrutura},~\ref{fig:ex1} e~\ref{fig:ex2}, a título de exemplo. A primeira figura apresenta a estrutura de uma figura. A \emph{descrição} deve aparecer \textbf{acima} da figura. Abaixo da figura, deve ser indicado a origem da imagem, mesmo se essa for apenas os autores do texto.
 
-A Figura~\ref{fig:ex1} representa o caso mais comum, onde a figura propriamente dita é importada de um arquivo ( neste exemplo o formato é \texttt{eps} ou \texttt{pdf}. Veja a seção \ref{sec:fig_format}). A Figura~\ref{fig:ex2} exemplifica o uso do environment \texttt{picture}, para desenhar usando o próprio~\LaTeX.
+%% A Figura~\ref{fig:ex1} representa o caso mais comum, onde a figura propriamente dita é importada de um arquivo ( neste exemplo o formato é \texttt{eps} ou \texttt{pdf}. Veja a seção \ref{sec:fig_format}). A Figura~\ref{fig:ex2} exemplifica o uso do environment \texttt{picture}, para desenhar usando o próprio~\LaTeX.
 
-\begin{figure}[h]
-    \caption{Descrição da Figura deve ir no topo}
-    \begin{center}
-        % Aqui vai um includegraphics , um picture environment ou qualquer
-        % outro comando necessário para incorporar o formato de imagem
-        % utilizado.        
-        \begin{picture}(100,100)
-            \put(0,0){\line(0,1){100}}
-            \put(0,0){\line(1,0){100}}
-            \put(100,100){\line(0,-1){100}}
-            \put(100,100){\line(-1,0){100}}
-            \put(10,50){Uma Imagem}
-        \end{picture}    
-    \end{center}
-    \label{fig:estrutura}
-    \legend{Fonte: Os Autores}
-\end{figure}
+%% \begin{figure}[h]
+%%     \caption{Descrição da Figura deve ir no topo}
+%%     \begin{center}
+%%         % Aqui vai um includegraphics , um picture environment ou qualquer
+%%         % outro comando necessário para incorporar o formato de imagem
+%%         % utilizado.        
+%%         \begin{picture}(100,100)
+%%             \put(0,0){\line(0,1){100}}
+%%             \put(0,0){\line(1,0){100}}
+%%             \put(100,100){\line(0,-1){100}}
+%%             \put(100,100){\line(-1,0){100}}
+%%             \put(10,50){Uma Imagem}
+%%         \end{picture}    
+%%     \end{center}
+%%     \label{fig:estrutura}
+%%     \legend{Fonte: Os Autores}
+%% \end{figure}
 
-\begin{figure}
-    \caption{Exemplo de figura importada de um arquivo e também exemplo de caption muito grande que ocupa mais de uma linha na Lista~de~Figuras}
-    \begin{center}
-        \includegraphics[width=8em]{fig}
-    \end{center}
-    \legend{Fonte: Os Autores}
-    \label{fig:ex1}
-\end{figure}
+%% \begin{figure}
+%%     \caption{Exemplo de figura importada de um arquivo e também exemplo de caption muito grande que ocupa mais de uma linha na Lista~de~Figuras}
+%%     \begin{center}
+%%         \includegraphics[width=8em]{fig}
+%%     \end{center}
+%%     \legend{Fonte: Os Autores}
+%%     \label{fig:ex1}
+%% \end{figure}
 
 % o `[h]' abaixo é um parâmetro opcional que sugere que o LaTeX coloque a
 % figura exatamente neste ponto do texto. Somente preocupe-se com esse tipo
@@ -217,85 +217,85 @@ A Figura~\ref{fig:ex1} representa o caso mais comum, onde a figura propriamente 
 % pode fazer o LaTeX mudar completamente de idéia sobre onde colocar as
 % figuras e tabelas)
 % \begin{figure}[h]
-\begin{figure}
-    \caption{Exemplo de figura desenhada com o environment \texttt{picture}.}
-    \begin{center}
-        \setlength{\unitlength}{.1em}
-        \begin{picture}(100,100)
-            \put(20,20){\circle{20}}
-            \put(20,20){\small\makebox(0,0){a}}
-            \put(80,80){\circle{20}}
-            \put(80,80){\small\makebox(0,0){b}}
-            \put(28,28){\vector(1,1){44}}
-        \end{picture}
-    \end{center}
-    \legend{Fonte: Os Autores}
-    \label{fig:ex2}
-\end{figure}
+%% \begin{figure}
+%%     \caption{Exemplo de figura desenhada com o environment \texttt{picture}.}
+%%     \begin{center}
+%%         \setlength{\unitlength}{.1em}
+%%         \begin{picture}(100,100)
+%%             \put(20,20){\circle{20}}
+%%             \put(20,20){\small\makebox(0,0){a}}
+%%             \put(80,80){\circle{20}}
+%%             \put(80,80){\small\makebox(0,0){b}}
+%%             \put(28,28){\vector(1,1){44}}
+%%         \end{picture}
+%%     \end{center}
+%%     \legend{Fonte: Os Autores}
+%%     \label{fig:ex2}
+%% \end{figure}
 
-Tabelas são construídas com praticamente os mesmos comandos. Ver a tabela \ref{tbl:ex1}.
+%% Tabelas são construídas com praticamente os mesmos comandos. Ver a tabela \ref{tbl:ex1}.
 
-\begin{table}[h]
-    \caption{Uma tabela de Exemplo}
-    % OBS: não use \begin{center}, pois este aumenta o espaçamento entre a caption/legend e a tabela
-    % Para figuras, a aparência é melhor com o espaçamento extra
-    \centering
-        \begin{tabular}{c|c|p{5cm}}
-          \hline
-          \textit{Col 1}  &   \textit{Col 2}  &   \textit{Col 3} \\
-          \hline
-          \hline
-          Val 1           &   Val 2           & Esta coluna funciona como um parágrafo, tendo uma margem definida em 5cm. Quebras de linha funcionam como em qualquer parágrafo do tex. \\
-          Valor Longo     & Val 2             & Val 3 \\
-          \hline
-        \end{tabular}
-    \legend{Fonte: Os Autores}
-    \label{tbl:ex1}
-\end{table}
+%% \begin{table}[h]
+%%     \caption{Uma tabela de Exemplo}
+%%     % OBS: não use \begin{center}, pois este aumenta o espaçamento entre a caption/legend e a tabela
+%%     % Para figuras, a aparência é melhor com o espaçamento extra
+%%     \centering
+%%         \begin{tabular}{c|c|p{5cm}}
+%%           \hline
+%%           \textit{Col 1}  &   \textit{Col 2}  &   \textit{Col 3} \\
+%%           \hline
+%%           \hline
+%%           Val 1           &   Val 2           & Esta coluna funciona como um parágrafo, tendo uma margem definida em 5cm. Quebras de linha funcionam como em qualquer parágrafo do tex. \\
+%%           Valor Longo     & Val 2             & Val 3 \\
+%%           \hline
+%%         \end{tabular}
+%%     \legend{Fonte: Os Autores}
+%%     \label{tbl:ex1}
+%% \end{table}
 
-\subsection{Formato de Figuras}
-\label{sec:fig_format}
+%% \subsection{Formato de Figuras}
+%% \label{sec:fig_format}
 
-O LaTeX permite utilizar vários formatos de figuras, entre eles \emph{eps}, \emph{pdf}, \emph{jpeg} e \emph{png}. Programas de diagramação como Inkscape (e mesmo LibreOffice) permitem gerar arquivos de imagens vetoriais que podem ser utilizados pelo LaTeX sem dificuldade. Pacotes externos permitem utilizar SVG e outros formatos.
+%% O LaTeX permite utilizar vários formatos de figuras, entre eles \emph{eps}, \emph{pdf}, \emph{jpeg} e \emph{png}. Programas de diagramação como Inkscape (e mesmo LibreOffice) permitem gerar arquivos de imagens vetoriais que podem ser utilizados pelo LaTeX sem dificuldade. Pacotes externos permitem utilizar SVG e outros formatos.
 
-Dia e xfig são programas utilizados por dinossauros para gerar figuras vetoriais. Se possível, evite-os.
+%% Dia e xfig são programas utilizados por dinossauros para gerar figuras vetoriais. Se possível, evite-os.
 
-\subsection{Classificação dos etc.}
+%% \subsection{Classificação dos etc.}
 
-O formato do instituo de informática define 5 níveis: capítulo, seção, subseção e outros 2 sem nome.
+%% O formato do instituo de informática define 5 níveis: capítulo, seção, subseção e outros 2 sem nome.
 
-\subsubsection{Subsubseção}
-Exemplo de uma subsubseção.
+%% \subsubsection{Subsubseção}
+%% Exemplo de uma subsubseção.
 
-\paragraph{Parágrafo}
-Exemplo de um parágrafo.
+%% \paragraph{Parágrafo}
+%% Exemplo de um parágrafo.
 
-\section{Sobre as referências bibliográficas}
+%% \section{Sobre as referências bibliográficas}
 
-A classe \emph{iiufrgs} faz uso do pacote \emph{abnTeX2} com algumas alterações
-feitas por Sandro Rama Fiorini. Culpe ele se algo der errado. Agradeça a ele
-pelo que der certo. As modificações dão uma camada de tinta NATBIB-style,
-já que o abntex2 usa uns comandos de citação feitos para alienígenas de 5 braços
-wtf. Exemplos de citação:
+%% A classe \emph{iiufrgs} faz uso do pacote \emph{abnTeX2} com algumas alterações
+%% feitas por Sandro Rama Fiorini. Culpe ele se algo der errado. Agradeça a ele
+%% pelo que der certo. As modificações dão uma camada de tinta NATBIB-style,
+%% já que o abntex2 usa uns comandos de citação feitos para alienígenas de 5 braços
+%% wtf. Exemplos de citação:
 
-\begin{itemize}
-    \item \emph{cite}: Unicórnios são verdes \cite{Adams2009Conceptual};
-    \item \emph{citep}:Unicórnios são verdes \citep{Adams2009Conceptual};
-    \item \emph{citet}: Segundo \citet{Adams2009Conceptual}, unicórnios são
-    verdes.
-    \item \emph{citen or citenum}: Segundo \citen{Adams2009Conceptual},
-    unicórnios são verdes.
-    \item \emph{citeauthor e citeyearpar}: Segundo artigos de
-    \citeauthor{Adams2009Conceptual} , unicórnios são azuis
-    \citeyearpar{Adams2009Conceptual}.
+%% \begin{itemize}
+%%     \item \emph{cite}: Unicórnios são verdes \cite{Adams2009Conceptual};
+%%     \item \emph{citep}:Unicórnios são verdes \citep{Adams2009Conceptual};
+%%     \item \emph{citet}: Segundo \citet{Adams2009Conceptual}, unicórnios são
+%%     verdes.
+%%     \item \emph{citen or citenum}: Segundo \citen{Adams2009Conceptual},
+%%     unicórnios são verdes.
+%%     \item \emph{citeauthor e citeyearpar}: Segundo artigos de
+%%     \citeauthor{Adams2009Conceptual} , unicórnios são azuis
+%%     \citeyearpar{Adams2009Conceptual}.
 
-\end{itemize}
+%% \end{itemize}
 
-O estilo abnt fornecido antigamente pelo UTUG não é mais recomendado, pois não
-produz saída de acordo com as exigências da biblioteca.
+%% O estilo abnt fornecido antigamente pelo UTUG não é mais recomendado, pois não
+%% produz saída de acordo com as exigências da biblioteca.
 
-Recomenda-se o uso de bibtex para gerenciar as referências (veja o arquivo
-biblio.bib).
+%% Recomenda-se o uso de bibtex para gerenciar as referências (veja o arquivo
+%% biblio.bib).
 
 % e aqui vai a parte principal
 \chapter{Recommendation Algorithms}
@@ -306,7 +306,7 @@ The basic idea behind any recommender system is to obtain a utility function to 
 Recommender systems can be broadly divided into two categories: content-based methods and collaborative filtering methods \cite{Rakesh2016}.
 The former utilizes the content features of users or items in order to recommend items to users. In collaborative filtering methods, user ratings and other data are used in order to calculate similarities between users or items, which are then ranked to show the most relevant recommendations. These two methods are sometimes combined into what is known as Hybrid Recommender Systems.
 \section{Collaborative filtering}
-Collaborative filtering is based on the principle that similar users will share similar interests. In the traditional approach, each customer is represented by a \(N\)-dimensional vector of items, where \(N\) stands for the number of available items, and each vector component corresponds to the user rating of the item. For large databases, CF can be prohibitively computationally expensive. Its worst case performance is \(O(MN)\) where \(M\) is the number of customers and \(N\) is the number of items \cite{Linden2003}, but this problem can be generally alleviated since in most cases the customer vector is extremely sparse. Item-to-item CF is another method proposed by Amazon that tries to minimize these scaling issues by focusing on item similarity instead of user similarity. Each item purchased by the customer is compared to other items in the dataset in order to calculate a similarity metric. The algorithm is shown bellow:
+Collaborative filtering is based on the principle that similar users will share similar interests. In the traditional approach, each customer is represented by a \(N\)-dimensional vector of items, where \(N\) stands for the number of available items, and each vector component corresponds to the user rating of the item. For large databases, CF can be prohibitively computationally expensive. Its worst case performance is \(O(MN)\) where \(M\) is the number of customers and \(N\) is the number of items \cite{Linden2003}, but this problem can be generally alleviated since in most cases the customer vector is extremely sparse. Item-to-item CF is another method proposed by Amazon that tries to minimize these scaling issues by focusing on item instead of user similarity. Each item purchased by the customer is compared to other items in the dataset in order to calculate a similarity metric. The algorithm is shown bellow:
 
 \begin{algorithm}[H]
  \For{each item in product catalog, I1}{
@@ -330,11 +330,27 @@ There are many ways to compute the similarity between items, one common method i
 In either case, for this to work large amounts of data about the user is required. This is known as the cold start problem: new users who haven't rated many items yet will have a reduced recommendation quality. On the other hand, no information about the item itself is needed, making CF specially applicable to collections of hard-to-analyze items such as movies.
 
 \section{Content-based filtering}
-In this method a description of each item is constructed using some kind of item presentation algorithm such as Latent Dirichlet Allocation or TF-IDF. These representations are then compared to items previously liked by the user and the best-matching items are recommended. Since this approach focus on item rather than user similarity, it doesn't suffer from the cold start problem as no user preferences information is required. However, since only similar items to those already rated by the user will be considered, CBF approaches tend to suffer from over-specialization \cite{Iaquinta2008}. This is known as the serendipity problem.
+In this method a description of each item is constructed using structured data or some sort of item presentation algorithm such as Latent Dirichlet Allocation or TF-IDF. This representation is then compared to the user profile and the best-matching items are recommended. The user profile can consist of many different types of information: a history of the user's interaction with the system such as page views, searches and purchases is often used to train the model without any explicit user input. Some systems may require the user to explicitly state his interests, however it may be very hard to get users to make this effort, rendering this approach very limited in practice.
 
+As CBF focus on item rather than user similarity, it avoids the cold start problem since little information about user preference is needed. However, since only similar items to those already rated by the user will be considered, CBF approaches tend to suffer from over-specialization \cite{Iaquinta2008}. This is known as the serendipity problem. Another limitation of CBF algorithms is that items are required to contain enough information in order to distinguish items the user likes from items the user doesn't like. For example, a dataset of songs where only the song name is available would not be enough to make good predictions based on this content only, however this would pose no problem for collaborative filtering methods which rely on user similarity. 
 
 \chapter{About Catarse}
-Launched in January 2011, Catarse was the first crowdfunding platform for creative projects in Brazil. With over 7000 successfully financed projects raising R\$77 millions from 480.000 people, it's currently the largest national platform of its kind. It works similarly to most crowdfunding platforms: the project owner presents his or her idea and specifies the required investment as well as the cutoff date for the project, while offering rewards for those who back it. Projects are divided in 3 main categories: all-or-nothing, flexible and recurrent. In the first type, projects are available for backing up to 60 days and the project owner only receives the raised amount if the project's goal is met, otherwise all the money is returned to its original backers. On flexible projects the owner receives the raised amount whether the goal is reached or not. Recurrent projects are subscription based and the owner can collect the money monthly. This work will only focus on the first two types of projects.
+Launched in January 2011, Catarse was the first crowdfunding platform for creative projects in Brazil. With over 7000 successfully financed projects raising R\$77 millions from 480.000 people, it's currently the largest national platform of its kind. It works similarly to most crowdfunding platforms: the project owner presents his or her idea and specifies the required investment as well as the cutoff date for the project, while offering rewards for those who back it. Projects are divided into 3 main categories: all-or-nothing, flexible and recurrent. In the first type, projects are available for backing up to 60 days and the project owner only receives the raised amount if the project's goal is met, otherwise all the money is returned to its original backers. On flexible projects the owner receives the raised amount whether the goal is reached or not. Recurrent projects are subscription based and the owner can collect the money monthly. This work will only focus on the first two types of projects.
+
+\chapter{Recommending projects}
+Catarse's dataset is unique in a variety of ways that makes collaborative filtering techniques hard to apply. Firstly, unlike regular e-commerce Web sites such as Amazon where products stay available for many years, crowdfunding projects have a predetermined cutoff date, after which it's no longer possible to make a pledge. It makes no sense to recommend expired projects, severely limiting our training data to online projects only. Another challenge is the fact that the majority of Catarse's users only back one project, making it very hard to get enough data for CF methods to work properly. Our only choice is then to use content-based methods, this allows us to train our model with the whole dataset to extract backer-project features, and later use this model to search for online projects with the highest backing probability for the current user.
+
+\chapter{Data preparation}
+The dataset \(D\)w as obtained directly from Catarse's production database. Each training example consists of a project-backer pair \((p,b)\) with 30 dimensions divided as follows:
+\begin{itemize}
+    \item \emph{project features}: category, mode, location, recommended by admin, duration, goal, budget length, description length, total contributions, number of projects by the owner
+    \item \emph{user features}: location, number of backed projects in each category
+\end{itemize}
+
+In order to trim irrelevant data, we removed canceled and draft projects as well as projects with no backers from the dataset. The final cardinality of \(D\) was 1103836. In order to create a balanced dataset, we create 1103836 negative examples by randomly combining users with projects they haven't backed.
+
+
+
 % \chapter{Estado da arte}
 % \chapter{Mais estado da arte}
 % \chapter{A minha contribuição}
