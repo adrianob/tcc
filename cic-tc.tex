@@ -37,7 +37,7 @@
 % 
 % Informações gerais
 % 
-\title{A comparison of recommender systems for crowdfunding projects.}
+\title{A comparison of recommender systems for crowdfunding projects}
 
 \author{Carniel Benin}{Adriano}
 % alguns documentos podem ter varios autores:
@@ -340,14 +340,18 @@ Launched in January 2011, Catarse was the first crowdfunding platform for creati
 \chapter{Recommending projects}
 Catarse's dataset is unique in a variety of ways that makes collaborative filtering techniques hard to apply. Firstly, unlike regular e-commerce Web sites such as Amazon where products stay available for many years, crowdfunding projects have a predetermined cutoff date, after which it's no longer possible to make a pledge. It makes no sense to recommend expired projects, severely limiting our training data to online projects only. Another challenge is the fact that the majority of Catarse's users only back one project, making it very hard to get enough data for CF methods to work properly. Our only choice is then to use content-based methods, this allows us to train our model with the whole dataset to extract backer-project features, and later use this model to search for online projects with the highest backing probability for the current user.
 
-\chapter{Data preparation}
-The dataset \(D\)w as obtained directly from Catarse's production database. Each training example consists of a project-backer pair \((p,b)\) with 30 dimensions divided as follows:
+\section{Data preparation}
+The dataset \(D\)w as obtained directly from Catarse's production database. Each training example consists of a project-backer pair \((p,b)\) with 29 dimensions divided as follows:
 \begin{itemize}
-    \item \emph{project features}: category, mode, location, recommended by admin, duration, goal, budget length, description length, total contributions, number of projects by the owner
-    \item \emph{user features}: location, number of backed projects in each category
+    \item \emph{project features(10)}: category, mode, location, recommended by admin, duration, goal, budget length, description length, total contributions, number of projects by the owner
+    \item \emph{user features(19)}: location, number of backed projects in each category
 \end{itemize}
 
-In order to trim irrelevant data, we removed canceled and draft projects as well as projects with no backers from the dataset. The final cardinality of \(D\) was 1103836. In order to create a balanced dataset, we create 1103836 negative examples by randomly combining users with projects they haven't backed.
+In order to trim irrelevant data, we remove canceled and draft projects as well as projects with no backers from the dataset. The final cardinality of \(D\) was 1103836. In order to create a balanced dataset, we create 1103836 negative examples by randomly combining users with projects they haven't backed.
+test auc k-5 0.990905 std 0.000287
+Accuracy : 0.9645
+final:
+train-auc:0.983985
 
 
 

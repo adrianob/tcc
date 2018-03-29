@@ -9,5 +9,5 @@
 \contentsline {section}{\numberline {2.2}Content-based filtering}{11}{section.2.2}
 \contentsline {chapter}{3~About Catarse}{13}{CHAPTER.3}
 \contentsline {chapter}{4~Recommending projects}{14}{CHAPTER.4}
-\contentsline {chapter}{5~Data preparation}{15}{CHAPTER.5}
-\contentsline {chapter}{\xspace {}References}{16}{schapter.7}
+\contentsline {section}{\numberline {4.1}Data preparation}{14}{section.4.1}
+\contentsline {chapter}{\xspace {}References}{15}{schapter.7}
