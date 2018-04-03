@@ -40,12 +40,12 @@ f_names = [
         'mode_count',
         'same_state',
         'recommended',
-        'online_days',
-        'goal',
+        'has_video',
         'budget',
         'description',
         'pledged',
         'contributions',
+        'progress',
         'owner_projects',
         'reward_count'
     ]
@@ -63,7 +63,7 @@ def get_predictions(user_id):
       JOIN projects ON projects.id = contributions.project_id
       WHERE contributions.user_id = u.id
         AND projects.mode = p.mode) AS mode_count,
- (coalesce(
+    (coalesce(
             (SELECT state_id
              FROM cities
              WHERE cities.id = p.city_id
@@ -74,12 +74,12 @@ def get_predictions(user_id):
                AND state_id IS NOT NULL
              LIMIT 1), 0))::integer AS same_state,
     coalesce(p.recommended, false)::integer as recommended,
-    coalesce(p.online_days, 60)::integer AS online_days,
-    coalesce(p.goal::float, 0) AS goal,
+    (p.video_url is not null)::integer AS has_video,
     coalesce(char_length(p.budget), 0) AS budget_length,
     coalesce(char_length(p.about_html), 0) AS about_length,
-    COALESCE((SELECT sum(pa.value) from contributions c join payments pa on pa.contribution_id = c.id where pa.state IN ('paid', 'pending') and c.project_id = p.id and pa.created_at <= p.created_at + '3 days'::interval)::float, 0) as pledged,
-    (SELECT count(*) from contributions c where c.project_id = p.id and c.created_at <= p.created_at + '3 days'::interval) as total_contributions,
+    COALESCE((SELECT sum(pa.value) from contributions c join payments pa on pa.contribution_id = c.id where pa.state IN ('paid') and c.project_id = p.id and pa.created_at <= p.online_at + '3 days'::interval)::float, 0) as pledged,
+    (SELECT count(*) from contributions c where c.project_id = p.id and c.created_at <= p.online_at + '3 days'::interval) as total_contributions,
+    (COALESCE((SELECT sum(pa.value) from contributions c join payments pa on pa.contribution_id = c.id where pa.state IN ('paid') and c.project_id = p.id and pa.created_at <= p.online_at + '3 days'::interval)::float, 0)/ p.goal) * (100)::numeric as progress,
     (SELECT count(*) from projects where projects.user_id = p.user_id AND projects.state != 'draft')::integer as project_count,
     (SELECT count(*) from rewards r where r.project_id = p.id)::integer as reward_count,
     p.id
@@ -89,7 +89,7 @@ def get_predictions(user_id):
     and p.state = 'online'
     AND NOT EXISTS (select true from contributions c2 where c2.project_id = p.id and c2.user_id = u.id)
     --and p.category_id = 14
-   and p.id IN( 72320)
+  --and p.id IN(70453 )
     """)
 
     rows = np.array(cur.fetchall())
@@ -105,7 +105,8 @@ def get_predictions(user_id):
         projects.append([pred, int(rows[i][-1])])
 
     projects.sort(key=lambda x: x[0], reverse=True)
-    print(projects[:20])
+    # print(projects[:20])
+    print(projects)
     display(eli5.format_as_html(eli5.explain_prediction_xgboost(bst, rows[0][:-1]),  show_feature_values=True))
 
 
@@ -113,6 +114,7 @@ def get_db_data():
     cur.execute("""
     WITH pt AS (SELECT c.project_id,
           sum(p.value) AS pledged,
+          ((sum(p.value) / projects.goal) * (100)::numeric) AS progress,
           count(DISTINCT c.id) AS total_contributions
    FROM ((contributions c
           JOIN projects ON ((c.project_id = projects.id)))
@@ -147,12 +149,12 @@ def get_db_data():
                AND state_id IS NOT NULL
              LIMIT 1), 0))::integer AS same_state,
     coalesce(p.recommended, false)::integer as recommended,
-    coalesce(p.online_days, 60)::integer AS online_days,
-    coalesce(p.goal::float, 0) AS goal,
+    (p.video_url is not null)::integer AS has_video,
     coalesce(char_length(p.budget), 0) AS budget_length,
     coalesce(char_length(p.about_html), 0) AS about_length,
     coalesce(pt.pledged::float, 0) AS pledged,
     coalesce(pt.total_contributions::integer, 0) AS total_contributions,
+    coalesce(pt.progress::float, 0) AS progress,
     (SELECT count(*) from projects where projects.user_id = p.user_id AND projects.state != 'draft')::integer as project_count,
     (SELECT count(*) from rewards r where r.project_id = p.id)::integer as reward_count,
     1 as y
@@ -160,8 +162,9 @@ def get_db_data():
    JOIN users u ON u.id = c.user_id
    JOIN projects p ON p.id = c.project_id
    LEFT JOIN pt ON pt.project_id = p.id
-   WHERE p.state NOT IN ('draft', 'rejected', 'deleted')
-   LIMIT 220000)
+   WHERE p.state IN ('successful')
+   AND p.created_at > '01-01-2015'::timestamp
+   LIMIT 200000)
 union all
   (SELECT 
      (SELECT count(*)
@@ -185,22 +188,23 @@ union all
                AND state_id IS NOT NULL
              LIMIT 1), 0))::integer AS same_state,
     coalesce(p.recommended, false)::integer as recommended,
-    coalesce(p.online_days, 60)::integer AS online_days,
-    coalesce(p.goal::float, 0) AS goal,
+    (p.video_url is not null)::integer AS has_video,
     coalesce(char_length(p.budget), 0) AS budget_length,
     coalesce(char_length(p.about_html), 0) AS about_length,
     coalesce(pt.pledged::float, 0) AS pledged,
     coalesce(pt.total_contributions::integer, 0) AS total_contributions,
+    coalesce(pt.progress::float, 0) AS progress,
     (SELECT count(*) from projects where projects.user_id = p.user_id AND projects.state != 'draft')::integer as project_count,
     (SELECT count(*) from rewards r where r.project_id = p.id)::integer as reward_count,
     0 as y
 from users u
-join projects p on p.id = u.id / (((SELECT count(*) from users) / (SELECT count(*) from projects)) * 4)
 join contributions c on c.user_id = u.id
+join projects p on p.id = u.id / (((SELECT max(id) from users) / (SELECT max(id) from projects)))
 LEFT JOIN pt ON pt.project_id = p.id
-WHERE p.state NOT IN ('draft', 'rejected', 'deleted')
+WHERE p.state IN ('failed')
 AND c.project_id != p.id
-limit 220000)
+AND p.created_at > '01-01-2015'::timestamp
+limit 200000)
     """)
     return np.array( cur.fetchall() )
 
@@ -263,7 +267,7 @@ def train_model(cache=False):
         dtest = xgb.DMatrix('catarse.txt.test', feature_names = f_names)
 
     # specify parameters via map, definition are same as c++ version
-    param = {'max_depth':5, 'eta':0.01, 'silent':1, 'booster': 'gbtree', 'min_child_weight': 2, 'objective':'binary:logistic', 'eval_metric': 'logloss'}
+    param = {'max_depth':4, 'eta':0.01, 'silent':1, 'booster': 'gbtree', 'min_child_weight': 1, 'objective':'binary:logistic', 'eval_metric': 'logloss'}
 
     # specify validations set to watch performance
     watchlist = [(dtrain, 'train'), (dtest, 'eval')]
@@ -358,7 +362,9 @@ def cv(cache=False):
     # print(bst)
 
 
-get_predictions(233124)
+# get_predictions(233124)
+# get_predictions(80901)
+get_predictions(23660)
 # train_model(cache=False)
 # train_final_model(cache=False)
 # cv(cache=False)
