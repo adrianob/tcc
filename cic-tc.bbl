@@ -5,18 +5,21 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.1 }
 
-\bibitem[Adams and Raubal 2009]{Adams2009Conceptual}
-\abntrefinfo{Adams and Raubal}{ADAMS; RAUBAL}{2009}
-{ADAMS, B.; RAUBAL, M. Conceptual space markup language (csml): Towards the
-  cognitive semantic web. In:  IEEE INTERNATIONAL CONFERENCE ON SEMANTIC
-  COMPUTING, 2009, Berkeley, USA. \textbf{Proceedings...} Washington, USA:
-  IEEE, 2009. p. 253–260.}
+\bibitem[Chen and Guestrin 2016]{Chen2016}
+\abntrefinfo{Chen and Guestrin}{CHEN; GUESTRIN}{2016}
+{CHEN, T.; GUESTRIN, C. {XGBoost}. In:  \textbf{Proceedings of the 22nd {ACM}
+  {SIGKDD} International Conference on Knowledge Discovery and Data Mining -
+  {KDD} {\textquotesingle}16}. [S.l.]: {ACM} Press, 2016.}
 
 \bibitem[Iaquinta et al. 2008]{Iaquinta2008}
 \abntrefinfo{Iaquinta et al.}{IAQUINTA et al.}{2008}
 {IAQUINTA, L. et al. Introducing serendipity in a content-based recommender
   system. In:  \textbf{2008 Eighth International Conference on Hybrid
   Intelligent Systems}. [S.l.]: {IEEE}, 2008.}
+
+\bibitem[Li]{Li2012}
+\abntrefinfo{Li}{LI}{}
+{LI, P. Robust logitboost and adaptive base class (abc) logitboost.}
 
 \bibitem[Linden, Smith and York 2003]{Linden2003}
 \abntrefinfo{Linden, Smith and York}{LINDEN; SMITH; YORK}{2003}

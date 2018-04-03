@@ -202,14 +202,14 @@ No início dos tempos, Donald E. Knuth criou o \TeX. Algum tempo depois, Leslie 
 %%     \legend{Fonte: Os Autores}
 %% \end{figure}
 
-%% \begin{figure}
-%%     \caption{Exemplo de figura importada de um arquivo e também exemplo de caption muito grande que ocupa mais de uma linha na Lista~de~Figuras}
-%%     \begin{center}
-%%         \includegraphics[width=8em]{fig}
-%%     \end{center}
-%%     \legend{Fonte: Os Autores}
-%%     \label{fig:ex1}
-%% \end{figure}
+\begin{figure}
+    \caption{Exemplo de figura importada de um arquivo e também exemplo de caption muito grande que ocupa mais de uma linha na Lista~de~Figuras}
+    \begin{center}
+        \includegraphics[width=8em]{fig}
+    \end{center}
+    \legend{Fonte: Os Autores}
+    \label{fig:ex1}
+\end{figure}
 
 % o `[h]' abaixo é um parâmetro opcional que sugere que o LaTeX coloque a
 % figura exatamente neste ponto do texto. Somente preocupe-se com esse tipo
@@ -347,11 +347,46 @@ The dataset \(D\)w as obtained directly from Catarse's production database. Each
     \item \emph{user features(19)}: location, number of backed projects in each category
 \end{itemize}
 
-In order to trim irrelevant data, we remove canceled and draft projects as well as projects with no backers from the dataset. The final cardinality of \(D\) was 1103836. In order to create a balanced dataset, we create 1103836 negative examples by randomly combining users with projects they haven't backed.
+In order to trim irrelevant data, we remove canceled and draft projects as well as projects with no backers from the dataset. The final cardinality of \(D\) was 1103836. In order to balance our dataset, we create 1103836 negative examples by randomly combining users with projects they haven't backed.
 test auc k-5 0.990905 std 0.000287
 Accuracy : 0.9645
 final:
 train-auc:0.983985
+
+\chapter{Gradient boosting trees}
+In recent years, tree boosting has become a increasingly popular method and been shown to give state-of-the-art results for many classification problems \cite{Li2012}. As in any supervised learning method, our objective is to train a model to predict a target variable \(y_i\) given features \(x_i\). Boosting methods are characterized by combining many weak learners into a strong one in a iterative fashion. In this case, our model is an ensemble of trees, more specifically a set of classification and regression trees (CART). Unlike decision trees, where the leafs contain decision values, the leafs on gradient boosting trees contain a score \(s \in \mathbb{R}\). Multiple simple trees are then constructed and the prediction of each tree is summed up to get the final score ~\ref{fig:ex1}. Our model can then be defined as
+
+\(\hat{y}_i = \sum_{k=1}^K f_k(x_i), f_k \in \mathcal{F}\)
+
+where \(K\) is the number of trees, \(f\) is a function in the functional space \mathcal{F}, and \mathcal{F} is the set of all possible CARTs \cite{Chen2016}. Our objective function can the be written as
+
+\(\text{obj}(\theta) = \sum_i^n l(y_i, \hat{y}_i) + \sum_{k=1}^K \Omega(f_k)\)
+
+\begin{figure}
+    \caption{GbTree example}
+    \begin{center}
+        \includegraphics[width=28em]{twocart}
+    \end{center}
+    \legend{Source: XGBoost official site}
+    \label{fig:ex1}
+\end{figure}
+
+\section{Objective function}
+Our objective function is used to measure the performance of our model for each set of parameters. We define it as the sum of the training loss function \(L\) with the regularization term \Omega.
+
+\(\text{obj}(\theta) = L(\theta) + \Omega(\theta)\)
+
+In this work we define our loss function as the logistic loss function for logistic regression.
+
+\(L(\theta) = \sum_i[ y_i\ln (1+e^{-\hat{y}_i}) + (1-y_i)\ln (1+e^{\hat{y}_i})]\)
+
+And our regularization function is defined as follows:
+
+\(\Omega(f) = \gamma T + \frac{1}{2}\lambda \sum_{j=1}^T w_j^2\)
+
+Where \(w\) is the vector of scores on leaves and \(T\) is the number of leaves.
+
+After defining our objective function, we optimize it in order to train our model.
 
 
 
