@@ -36,103 +36,9 @@ except:
 cur = conn.cursor()
 
 f_names = [
-        'cat0',
-        'cat1',
-        'cat4',
-        'cat7',
-        'cat9',
-        'cat10',
-        'cat12',
-        'cat13',
-        'cat14',
-        'cat15',
-        'cat16',
-        'cat17',
-        'cat18',
-        'cat19',
-        'cat20',
-        'cat21',
-        'cat23',
-        'cat31',
-        'cat35',
-        'aon',
-        'flex',
-        'sub',
-        'state0',
-        'state1',
-        'state2',
-        'state3',
-        'state4',
-        'state5',
-        'state6',
-        'state7',
-        'state8',
-        'state9',
-        'state10',
-        'state11',
-        'state12',
-        'state13',
-        'state14',
-        'state15',
-        'state16',
-        'state17',
-        'state18',
-        'state19',
-        'state20',
-        'state21',
-        'state22',
-        'state23',
-        'state24',
-        'state25',
-        'state26',
-        'state27',
-        'ustate0',
-        'ustate1',
-        'ustate2',
-        'ustate3',
-        'ustate4',
-        'ustate5',
-        'ustate6',
-        'ustate7',
-        'ustate8',
-        'ustate9',
-        'ustate10',
-        'ustate11',
-        'ustate12',
-        'ustate13',
-        'ustate14',
-        'ustate15',
-        'ustate16',
-        'ustate17',
-        'ustate18',
-        'ustate19',
-        'ustate20',
-        'ustate21',
-        'ustate22',
-        'ustate23',
-        'ustate24',
-        'ustate25',
-        'ustate26',
-        'ustate27',
-        'ucat0',
-        'ucat1',
-        'ucat4',
-        'ucat7',
-        'ucat9',
-        'ucat10',
-        'ucat12',
-        'ucat13',
-        'ucat14',
-        'ucat15',
-        'ucat16',
-        'ucat17',
-        'ucat18',
-        'ucat19',
-        'ucat20',
-        'ucat21',
-        'ucat23',
-        'ucat31',
-        'ucat35',
+        'category_count',
+        'mode_count',
+        'same_state',
         'recommended',
         'online_days',
         'goal',
@@ -140,164 +46,71 @@ f_names = [
         'description',
         'pledged',
         'contributions',
-        'owner_projects'
+        'owner_projects',
+        'reward_count'
     ]
-
-def get_categories():
-    cur.execute("""select id from categories order by id;""")
-    rows = np.array(cur.fetchall())
-    return rows
-
-def get_modes():
-    cur.execute("""select distinct mode from projects order by mode;""")
-    rows = np.array(cur.fetchall())
-    return rows
-
-def get_states():
-    cur.execute("""select id from states order by id;""")
-    rows = np.array(cur.fetchall())
-    return rows
-
-def encode_features(data, n_categories):
-    # get all possible values for categorical data so that features stay independent of data variety
-    categories = get_categories()
-    states = get_states()
-    modes = get_modes()
-    states = np.concatenate((states, [ [0] ]))
-    categories = np.concatenate((categories, [ [0] ]))
-
-    first_row = data[0]
-    for id in categories:
-        new_row = first_row
-        new_row[0] = id[0]
-        data = np.concatenate((data, [ new_row ]))
-    for id in modes:
-        new_row = first_row
-        new_row[1] = id[0]
-        data = np.concatenate((data, [ new_row ]))
-    for id in states:
-        new_row = first_row
-        new_row[2] = id[0]
-        data = np.concatenate((data, [ new_row ]))
-    for id in states:
-        new_row = first_row
-        new_row[3] = id[0]
-        data = np.concatenate((data, [ new_row ]))
-
-    encoded_x = None
-    for i in range(0, n_categories):
-        label_encoder = LabelEncoder()
-        feature = label_encoder.fit_transform([item[i] for item in data])
-        feature = feature.reshape(data.shape[0], 1)
-        onehot_encoder = OneHotEncoder(sparse=False)
-        feature = onehot_encoder.fit_transform(feature)
-        if encoded_x is None:
-            encoded_x = feature
-        else:
-            encoded_x = np.concatenate((encoded_x, feature), axis=1)
-
-    to_remove = len(categories) + len(modes) + 2 * len(states)
-    formated_data = np.concatenate((encoded_x[:-to_remove], [item[n_categories:] for item in data[:-to_remove]]), axis=1)
-    return formated_data.astype(float)
-
 
 def get_predictions(user_id):
     cur.execute("""
-        SELECT
-    --categorical values, need to one-hot encode
-    p.category_id,
-    p.mode,
-    COALESCE((SELECT state_id from cities where cities.id = p.city_id limit 1), 0) as project_state,
-    COALESCE(u.state_id, 0) as user_state,
-    --integer values
-    u.c1,
-    u.c4,
-    u.c7,
-    u.c9,
-    u.c10,
-    u.c12,
-    u.c13,
-    u.c14,
-    u.c15,
-    u.c16,
-    u.c17,
-    u.c18,
-    u.c19,
-    u.c20,
-    u.c21,
-    u.c23,
-    u.c31,
-    u.c35,
-    COALESCE(p.recommended, false)::integer,
-    COALESCE(p.online_days::integer, 0),
-    COALESCE(p.goal::integer, 0),
-    COALESCE( char_length(p.budget), 0 ),
-    COALESCE( char_length(p.about_html), 0 ),
+     select
+    (SELECT count(*)
+      FROM contributions
+      JOIN projects ON projects.id = contributions.project_id
+      WHERE contributions.user_id = u.id
+        AND projects.category_id = p.category_id) AS category_count,
+     (SELECT count(*)
+      FROM contributions
+      JOIN projects ON projects.id = contributions.project_id
+      WHERE contributions.user_id = u.id
+        AND projects.mode = p.mode) AS mode_count,
+ (coalesce(
+            (SELECT state_id
+             FROM cities
+             WHERE cities.id = p.city_id
+             LIMIT 1), 0) = coalesce(
+            (SELECT state_id
+             FROM addresses a
+             WHERE a.id = u.address_id
+               AND state_id IS NOT NULL
+             LIMIT 1), 0))::integer AS same_state,
+    coalesce(p.recommended, false)::integer as recommended,
+    coalesce(p.online_days, 60)::integer AS online_days,
+    coalesce(p.goal::float, 0) AS goal,
+    coalesce(char_length(p.budget), 0) AS budget_length,
+    coalesce(char_length(p.about_html), 0) AS about_length,
     COALESCE((SELECT sum(pa.value) from contributions c join payments pa on pa.contribution_id = c.id where pa.state IN ('paid', 'pending') and c.project_id = p.id and pa.created_at <= p.created_at + '3 days'::interval)::float, 0) as pledged,
-    (SELECT count(*) from contributions c where c.project_id = p.id and c.created_at <= p.created_at + '3 days'::interval) as contributions_total,
-    (SELECT count(*) from projects where projects.user_id = p.user_id AND projects.state != 'draft') as project_count,
+    (SELECT count(*) from contributions c where c.project_id = p.id and c.created_at <= p.created_at + '3 days'::interval) as total_contributions,
+    (SELECT count(*) from projects where projects.user_id = p.user_id AND projects.state != 'draft')::integer as project_count,
+    (SELECT count(*) from rewards r where r.project_id = p.id)::integer as reward_count,
     p.id
-    from projects p
-    LEFT JOIN LATERAL (
-    SELECT
-    u.id,
-    a.state_id as state_id,
-    (select count(*) from contributions join projects on projects.id = contributions.project_id where contributions.user_id = u.id and projects.category_id = 1 and contributions.was_confirmed) as c1,
-    (select count(*) from contributions join projects on projects.id = contributions.project_id where contributions.user_id = u.id and projects.category_id = 4 and contributions.was_confirmed) as c4,
-    (select count(*) from contributions join projects on projects.id = contributions.project_id where contributions.user_id = u.id and projects.category_id = 7 and contributions.was_confirmed) as c7,
-    (select count(*) from contributions join projects on projects.id = contributions.project_id where contributions.user_id = u.id and projects.category_id = 9 and contributions.was_confirmed) as c9,
-    (select count(*) from contributions join projects on projects.id = contributions.project_id where contributions.user_id = u.id and projects.category_id = 10 and contributions.was_confirmed) as c10,
-    (select count(*) from contributions join projects on projects.id = contributions.project_id where contributions.user_id = u.id and projects.category_id = 12 and contributions.was_confirmed) as c12,
-    (select count(*) from contributions join projects on projects.id = contributions.project_id where contributions.user_id = u.id and projects.category_id = 13 and contributions.was_confirmed) as c13,
-    (select count(*) from contributions join projects on projects.id = contributions.project_id where contributions.user_id = u.id and projects.category_id = 14 and contributions.was_confirmed) as c14,
-    (select count(*) from contributions join projects on projects.id = contributions.project_id where contributions.user_id = u.id and projects.category_id = 15 and contributions.was_confirmed) as c15,
-    (select count(*) from contributions join projects on projects.id = contributions.project_id where contributions.user_id = u.id and projects.category_id = 16 and contributions.was_confirmed) as c16,
-    (select count(*) from contributions join projects on projects.id = contributions.project_id where contributions.user_id = u.id and projects.category_id = 17 and contributions.was_confirmed) as c17,
-    (select count(*) from contributions join projects on projects.id = contributions.project_id where contributions.user_id = u.id and projects.category_id = 18 and contributions.was_confirmed) as c18,
-    (select count(*) from contributions join projects on projects.id = contributions.project_id where contributions.user_id = u.id and projects.category_id = 19 and contributions.was_confirmed) as c19,
-    (select count(*) from contributions join projects on projects.id = contributions.project_id where contributions.user_id = u.id and projects.category_id = 20 and contributions.was_confirmed) as c20,
-    (select count(*) from contributions join projects on projects.id = contributions.project_id where contributions.user_id = u.id and projects.category_id = 21 and contributions.was_confirmed) as c21,
-    (select count(*) from contributions join projects on projects.id = contributions.project_id where contributions.user_id = u.id and projects.category_id = 23 and contributions.was_confirmed) as c23,
-    (select count(*) from contributions join projects on projects.id = contributions.project_id where contributions.user_id = u.id and projects.category_id = 31 and contributions.was_confirmed) as c31,
-    (select count(*) from contributions join projects on projects.id = contributions.project_id where contributions.user_id = u.id and projects.category_id = 35 and contributions.was_confirmed) as c35
-    from users u
-    left join addresses a on a.id = u.address_id
+    from projects p,
+    users u
     WHERE u.id = """ + str( user_id ) + """
-    ) u on true
-    where p.state = 'online'
+    and p.state = 'online'
     AND NOT EXISTS (select true from contributions c2 where c2.project_id = p.id and c2.user_id = u.id)
     --and p.category_id = 14
-   and p.id IN(56252)
+   and p.id IN( 72320)
     """)
 
-    rows = cur.fetchall()
-    rows = np.array( rows )
-
-    features = encode_features(rows, 4)
-    features_copy = list(features)
-    for i, feat in enumerate(features_copy):
-        feat = feat[:-1]
-        features_copy[i] = feat
-
+    rows = np.array(cur.fetchall())
+    #remove project id
+    features = rows[:, :-1]
     # load model and data in
-    features_copy = np.array(features_copy)
     bst = xgb.Booster(model_file='xgb.model')
-    
-    dtest = xgb.DMatrix(features_copy)
-    print(features_copy)
+
+    dtest = xgb.DMatrix(features)
     preds = bst.predict(dtest)
     projects = []
     for i, pred in enumerate( preds ):
-        projects.append([pred, features[i][-1]])
+        projects.append([pred, int(rows[i][-1])])
 
     projects.sort(key=lambda x: x[0], reverse=True)
-    print(projects)
-    display(eli5.format_as_html(eli5.explain_prediction_xgboost(bst, features_copy[0]),  show_feature_values=True))
+    print(projects[:20])
+    display(eli5.format_as_html(eli5.explain_prediction_xgboost(bst, rows[0][:-1]),  show_feature_values=True))
 
 
 def get_db_data():
     cur.execute("""
-    --get pledges from the first 3 days
     WITH pt AS (SELECT c.project_id,
           sum(p.value) AS pledged,
           count(DISTINCT c.id) AS total_contributions
@@ -312,275 +125,75 @@ def get_db_data():
      AND c.created_at <= projects.online_at + '3 days'::INTERVAL
    GROUP BY c.project_id,
             projects.id)
-
-  (SELECT --categorical values, need to one-hot encode
- p.category_id,
- p.mode,
- coalesce(
+  (SELECT 
+     (SELECT count(*)
+      FROM contributions
+      JOIN projects ON projects.id = contributions.project_id
+      WHERE contributions.user_id = u.id
+        AND projects.category_id = p.category_id) AS category_count,
+     (SELECT count(*)
+      FROM contributions
+      JOIN projects ON projects.id = contributions.project_id
+      WHERE contributions.user_id = u.id
+        AND projects.mode = p.mode) AS mode_count,
+ (coalesce(
             (SELECT state_id
              FROM cities
              WHERE cities.id = p.city_id
-             LIMIT 1), 0) AS project_state,
- coalesce(
+             LIMIT 1), 0) = coalesce(
             (SELECT state_id
              FROM addresses a
              WHERE a.id = u.address_id
                AND state_id IS NOT NULL
-             LIMIT 1), 0) AS user_state, --integer values
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 1) AS c1,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 4) AS c4,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 7) AS c7,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 9) AS c9,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 10) AS c10,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 12) AS c12,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 13) AS c13,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 14) AS c14,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 15) AS c15,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 16) AS c16,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 17) AS c17,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 18) AS c18,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 19) AS c19,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 20) AS c20,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 21) AS c21,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 23) AS c23,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 31) AS c31,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 35) AS c35,
-    coalesce(p.recommended, false)::integer,
+             LIMIT 1), 0))::integer AS same_state,
+    coalesce(p.recommended, false)::integer as recommended,
     coalesce(p.online_days, 60)::integer AS online_days,
     coalesce(p.goal::float, 0) AS goal,
     coalesce(char_length(p.budget), 0) AS budget_length,
     coalesce(char_length(p.about_html), 0) AS about_length,
     coalesce(pt.pledged::float, 0) AS pledged,
     coalesce(pt.total_contributions::integer, 0) AS total_contributions,
-    (SELECT count(*) from projects where projects.user_id = p.user_id AND projects.state != 'draft')::integer as project_count
+    (SELECT count(*) from projects where projects.user_id = p.user_id AND projects.state != 'draft')::integer as project_count,
+    (SELECT count(*) from rewards r where r.project_id = p.id)::integer as reward_count,
+    1 as y
    FROM contributions c
    JOIN users u ON u.id = c.user_id
    JOIN projects p ON p.id = c.project_id
    LEFT JOIN pt ON pt.project_id = p.id
    WHERE p.state NOT IN ('draft', 'rejected', 'deleted')
    LIMIT 220000)
-UNION ALL
---negative examples
-
-    (select  p.category_id,
- p.mode,
- coalesce(
+union all
+  (SELECT 
+     (SELECT count(*)
+      FROM contributions
+      JOIN projects ON projects.id = contributions.project_id
+      WHERE contributions.user_id = u.id
+        AND projects.category_id = p.category_id) AS category_count,
+     (SELECT count(*)
+      FROM contributions
+      JOIN projects ON projects.id = contributions.project_id
+      WHERE contributions.user_id = u.id
+        AND projects.mode = p.mode) AS mode_count,
+ (coalesce(
             (SELECT state_id
              FROM cities
              WHERE cities.id = p.city_id
-             LIMIT 1), 0) AS project_state,
- coalesce(
+             LIMIT 1), 0) = coalesce(
             (SELECT state_id
              FROM addresses a
              WHERE a.id = u.address_id
                AND state_id IS NOT NULL
-             LIMIT 1), 0) AS user_state, --integer values
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 1) AS c1,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 4) AS c4,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 7) AS c7,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 9) AS c9,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 10) AS c10,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 12) AS c12,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 13) AS c13,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 14) AS c14,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 15) AS c15,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 16) AS c16,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 17) AS c17,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 18) AS c18,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 19) AS c19,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 20) AS c20,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 21) AS c21,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 23) AS c23,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 31) AS c31,
-
-     (SELECT count(*)
-      FROM contributions
-      JOIN projects ON projects.id = contributions.project_id
-      WHERE contributions.user_id = u.id
-        AND projects.category_id = 35) AS c35,
- coalesce(p.recommended, false)::integer,
- coalesce(p.online_days, 60)::integer AS online_days,
- coalesce(p.goal, 0)::float AS goal,
- coalesce(char_length(p.budget), 0) AS budget_length,
- coalesce(char_length(p.about_html), 0) AS about_length,
- coalesce(pt.pledged, 0)::float AS pledged,
- coalesce(pt.total_contributions, 0)::integer AS total_contributions,
- (SELECT count(*) from projects where projects.user_id = p.user_id AND projects.state != 'draft') as project_count
+             LIMIT 1), 0))::integer AS same_state,
+    coalesce(p.recommended, false)::integer as recommended,
+    coalesce(p.online_days, 60)::integer AS online_days,
+    coalesce(p.goal::float, 0) AS goal,
+    coalesce(char_length(p.budget), 0) AS budget_length,
+    coalesce(char_length(p.about_html), 0) AS about_length,
+    coalesce(pt.pledged::float, 0) AS pledged,
+    coalesce(pt.total_contributions::integer, 0) AS total_contributions,
+    (SELECT count(*) from projects where projects.user_id = p.user_id AND projects.state != 'draft')::integer as project_count,
+    (SELECT count(*) from rewards r where r.project_id = p.id)::integer as reward_count,
+    0 as y
 from users u
 join projects p on p.id = u.id / (((SELECT count(*) from users) / (SELECT count(*) from projects)) * 4)
 join contributions c on c.user_id = u.id
@@ -630,13 +243,9 @@ def train_final_model(cache=False):
 def train_model(cache=False):
     if not cache:
         rows = get_db_data()
-
-        features = encode_features(rows, 4)
-        positive_ys = np.ones(220000, dtype = np.int)
-        negative_ys = np.zeros(220000, dtype = np.int)
-        ys = np.concatenate([positive_ys, negative_ys])
-
-        seed = 5
+        features = rows[:, :-1]
+        ys = rows[:, -1]
+        seed = 1
         test_size = 0.33
         X_train, X_test, y_train, y_test = train_test_split(features, ys, test_size=test_size, random_state=seed)
         try:
@@ -750,7 +359,7 @@ def cv(cache=False):
 
 
 get_predictions(233124)
-# train_model(cache=True)
+# train_model(cache=False)
 # train_final_model(cache=False)
 # cv(cache=False)
 
