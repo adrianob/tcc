@@ -62,4 +62,13 @@
   keywords    = {cs.LG, stat.ML},
 }
 
+@InProceedings{Chen2016,
+  author    = {Tianqi Chen and Carlos Guestrin},
+  title     = {{XGBoost}},
+  booktitle = {Proceedings of the 22nd {ACM} {SIGKDD} International Conference on Knowledge Discovery and Data Mining - {KDD} {\textquotesingle}16},
+  year      = {2016},
+  publisher = {{ACM} Press},
+  doi       = {10.1145/2939672.2939785},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

@@ -10,10 +10,11 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Exemplo de figura importada de um arquivo e tamb\IeC {\'e}m exemplo de caption muito grande que ocupa mais de uma linha na Lista~de~Figuras}}{9}{figure.1.1}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Overview of collaborative filtering techniques.}}{12}{figure.2.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Feature weights in gbtree}}{15}{figure.4.1}
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces GbTree example}}{15}{figure.5.1}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces GbTree example}}{16}{figure.5.1}
 \addvspace {10\p@ }

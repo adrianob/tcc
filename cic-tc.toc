@@ -6,10 +6,10 @@
 \contentsline {chapter}{1~Introdu\IeC {\c c}\IeC {\~a}o}{9}{CHAPTER.1}
 \contentsline {chapter}{2~Recommendation Algorithms}{10}{CHAPTER.2}
 \contentsline {section}{\numberline {2.1}Collaborative filtering}{10}{section.2.1}
-\contentsline {section}{\numberline {2.2}Content-based filtering}{11}{section.2.2}
+\contentsline {section}{\numberline {2.2}Content-based filtering}{12}{section.2.2}
 \contentsline {chapter}{3~About Catarse}{13}{CHAPTER.3}
 \contentsline {chapter}{4~Recommending projects}{14}{CHAPTER.4}
 \contentsline {section}{\numberline {4.1}Data preparation}{14}{section.4.1}
-\contentsline {chapter}{5~Gradient boosting trees}{15}{CHAPTER.5}
-\contentsline {section}{\numberline {5.1}Objective function}{15}{section.5.1}
-\contentsline {chapter}{\xspace {}References}{17}{schapter.7}
+\contentsline {chapter}{5~Gradient boosting trees}{16}{CHAPTER.5}
+\contentsline {section}{\numberline {5.1}Objective function}{16}{section.5.1}
+\contentsline {chapter}{\xspace {}References}{18}{schapter.7}
