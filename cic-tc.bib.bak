@@ -91,4 +91,26 @@
   doi       = {10.1145/371920.372071},
 }
 
+@Article{Ansari2000,
+  author    = {Asim Ansari and Skander Essegaier and Rajeev Kohli},
+  title     = {Internet Recommendation Systems},
+  journal   = {Journal of Marketing Research},
+  year      = {2000},
+  volume    = {37},
+  number    = {3},
+  pages     = {363--375},
+  month     = {aug},
+  doi       = {10.1509/jmkr.37.3.363.18779},
+  publisher = {American Marketing Association ({AMA})},
+}
+
+@InProceedings{McNee2006,
+  author    = {Sean M. McNee and John Riedl and Joseph A. Konstan},
+  title     = {Being accurate is not enough},
+  booktitle = {{CHI} {\textquotesingle}06 extended abstracts on Human factors in computing systems - {CHI} {EA} {\textquotesingle}06},
+  year      = {2006},
+  publisher = {{ACM} Press},
+  doi       = {10.1145/1125451.1125659},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

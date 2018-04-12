@@ -5,11 +5,24 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.1 }
 
+\bibitem[Ansari, Essegaier and Kohli 2000]{Ansari2000}
+\abntrefinfo{Ansari, Essegaier and Kohli}{ANSARI; ESSEGAIER; KOHLI}{2000}
+{ANSARI, A.; ESSEGAIER, S.; KOHLI, R. Internet recommendation systems.
+\textbf{Journal of Marketing Research}, American Marketing Association ({AMA}),
+  v.~37, n.~3, p. 363--375, aug 2000.}
+
 \bibitem[Chen and Guestrin 2016]{Chen2016}
 \abntrefinfo{Chen and Guestrin}{CHEN; GUESTRIN}{2016}
 {CHEN, T.; GUESTRIN, C. {XGBoost}. In:  \textbf{Proceedings of the 22nd {ACM}
   {SIGKDD} International Conference on Knowledge Discovery and Data Mining -
   {KDD} {\textquotesingle}16}. [S.l.]: {ACM} Press, 2016.}
+
+\bibitem[Herlocker et al. 2004]{Herlocker2004}
+\abntrefinfo{Herlocker et al.}{HERLOCKER et al.}{2004}
+{HERLOCKER, J.~L. et al. Evaluating collaborative filtering recommender
+  systems.
+\textbf{{ACM} Transactions on Information Systems}, Association for Computing
+  Machinery ({ACM}), v.~22, n.~1, p. 5--53, jan 2004.}
 
 \bibitem[Iaquinta et al. 2008]{Iaquinta2008}
 \abntrefinfo{Iaquinta et al.}{IAQUINTA et al.}{2008}
@@ -28,12 +41,25 @@
 \textbf{{IEEE} Internet Computing}, Institute of Electrical and Electronics
   Engineers ({IEEE}), v.~7, n.~1, p. 76--80, jan 2003.}
 
+\bibitem[McNee, Riedl and Konstan 2006]{McNee2006}
+\abntrefinfo{McNee, Riedl and Konstan}{MCNEE; RIEDL; KONSTAN}{2006}
+{MCNEE, S.~M.; RIEDL, J.; KONSTAN, J.~A. Being accurate is not enough. In:
+  \textbf{{CHI} {\textquotesingle}06 extended abstracts on Human factors in
+  computing systems - {CHI} {EA} {\textquotesingle}06}. [S.l.]: {ACM} Press,
+  2006.}
+
 \bibitem[Rakesh, Lee and Reddy 2016]{Rakesh2016}
 \abntrefinfo{Rakesh, Lee and Reddy}{RAKESH; LEE; REDDY}{2016}
 {RAKESH, V.; LEE, W.-C.; REDDY, C.~K. Probabilistic group recommendation model
   for crowdfunding domains. In:  \textbf{Proceedings of the Ninth {ACM}
   International Conference on Web Search and Data Mining - {WSDM}
   {\textquotesingle}16}. [S.l.]: {ACM} Press, 2016.}
+
+\bibitem[Sarwar et al. 2001]{Sarwar2001}
+\abntrefinfo{Sarwar et al.}{SARWAR et al.}{2001}
+{SARWAR, B. et al. Item-based collaborative filtering recommendation
+  algorithms. In:  \textbf{Proceedings of the tenth international conference on
+  World Wide Web - {WWW} {\textquotesingle}01}. [S.l.]: {ACM} Press, 2001.}
 
 \bibitem[Schafer, Konstan and Riedl 2001]{Schafer2001}
 \abntrefinfo{Schafer, Konstan and Riedl}{SCHAFER; KONSTAN; RIEDL}{2001}

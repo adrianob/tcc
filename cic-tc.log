@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  4 APR 2018 14:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  12 APR 2018 15:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1107,6 +1107,34 @@ text indent calculated (toc, 2): 30.0pt
 number indent calculated (toc, 2): 39.0pt
 text noindent (toc, 2): 30.0pt
 number noindent (toc, 2): 0.0pt
+number indent by \l@... (toc, 2):  45.60004pt
+text indent by \l@... (toc, 2):  38.39996pt
+number indent by parent (toc, 2):  39.0pt
+text indent calculated (toc, 2): 30.0pt
+number indent calculated (toc, 2): 39.0pt
+text noindent (toc, 2): 30.0pt
+number noindent (toc, 2): 0.0pt
+number indent by \l@... (toc, 1):  18.0pt
+text indent by \l@... (toc, 1):  27.60004pt
+number indent by parent (toc, 1):  18.0pt
+text indent calculated (toc, 1): 21.0pt
+number indent calculated (toc, 1): 18.0pt
+text noindent (toc, 1): 30.0pt
+number noindent (toc, 1): 0.0pt
+number indent by \l@... (toc, 2):  45.60004pt
+text indent by \l@... (toc, 2):  38.39996pt
+number indent by parent (toc, 2):  39.0pt
+text indent calculated (toc, 2): 30.0pt
+number indent calculated (toc, 2): 39.0pt
+text noindent (toc, 2): 30.0pt
+number noindent (toc, 2): 0.0pt
+number indent by \l@... (toc, 1):  18.0pt
+text indent by \l@... (toc, 1):  27.60004pt
+number indent by parent (toc, 1):  18.0pt
+text indent calculated (toc, 1): 21.0pt
+number indent calculated (toc, 1): 18.0pt
+text noindent (toc, 1): 30.0pt
+number noindent (toc, 1): 0.0pt
 number indent by \l@... (toc, 1):  18.0pt
 text indent by \l@... (toc, 1):  27.60004pt
 number indent by parent (toc, 1):  18.0pt
@@ -1121,20 +1149,6 @@ text indent calculated (toc, 0): 18.0pt
 number indent calculated (toc, 0): 0.0pt
 text noindent (toc, 0): 30.0pt
 number noindent (toc, 0): 0.0pt
-number indent by \l@... (toc, 0):  0.0pt
-text indent by \l@... (toc, 0):  18.0pt
-number indent by parent (toc, 0):  0.0pt
-text indent calculated (toc, 0): 18.0pt
-number indent calculated (toc, 0): 0.0pt
-text noindent (toc, 0): 30.0pt
-number noindent (toc, 0): 0.0pt
-number indent by \l@... (toc, 1):  18.0pt
-text indent by \l@... (toc, 1):  27.60004pt
-number indent by parent (toc, 1):  18.0pt
-text indent calculated (toc, 1): 21.0pt
-number indent calculated (toc, 1): 18.0pt
-text noindent (toc, 1): 30.0pt
-number noindent (toc, 1): 0.0pt
 number indent by \l@... (toc, 0):  0.0pt
 text indent by \l@... (toc, 0):  18.0pt
 number indent by parent (toc, 0):  0.0pt
@@ -1172,6 +1186,12 @@ number noindent (toc, 0): 0.0pt
 ] [9
 
 ]
+Overfull \hbox (5.73024pt too wide) in paragraph at lines 230--231
+[]\T1/ptm/m/n/12 Since time im-memo-rial, peo-ple have re-lied on rec-om-men-da
+-tions from many sources
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1183,7 +1203,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 ]
 ! Undefined control sequence.
-l.318 \[sim(\pmb
+l.246 \[sim(\pmb
                  u, \pmb v) = \cos(\pmb u, \pmb v) = \frac {\pmb u \cdot \pm...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1192,7 +1212,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.318 \[sim(\pmb u, \pmb
+l.246 \[sim(\pmb u, \pmb
                          v) = \cos(\pmb u, \pmb v) = \frac {\pmb u \cdot \pm...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1201,7 +1221,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.318 \[sim(\pmb u, \pmb v) = \cos(\pmb
+l.246 \[sim(\pmb u, \pmb v) = \cos(\pmb
                                         u, \pmb v) = \frac {\pmb u \cdot \pm...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1210,7 +1230,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.318 \[sim(\pmb u, \pmb v) = \cos(\pmb u, \pmb
+l.246 \[sim(\pmb u, \pmb v) = \cos(\pmb u, \pmb
                                                 v) = \frac {\pmb u \cdot \pm...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1221,7 +1241,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> \pmb 
                 u \cdot \pmb v
-l.318 ...cdot \pmb v}{||\pmb u|| \cdot ||\pmb v||}
+l.246 ...cdot \pmb v}{||\pmb u|| \cdot ||\pmb v||}
                                                    = \frac{\sum_{i \in I_{uv...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1232,7 +1252,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> \pmb u \cdot \pmb 
                              v
-l.318 ...cdot \pmb v}{||\pmb u|| \cdot ||\pmb v||}
+l.246 ...cdot \pmb v}{||\pmb u|| \cdot ||\pmb v||}
                                                    = \frac{\sum_{i \in I_{uv...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1243,7 +1263,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ||\pmb 
                   u|| \cdot ||\pmb v||
-l.318 ...cdot \pmb v}{||\pmb u|| \cdot ||\pmb v||}
+l.246 ...cdot \pmb v}{||\pmb u|| \cdot ||\pmb v||}
                                                    = \frac{\sum_{i \in I_{uv...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1254,7 +1274,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ||\pmb u|| \cdot ||\pmb 
                                    v||
-l.318 ...cdot \pmb v}{||\pmb u|| \cdot ||\pmb v||}
+l.246 ...cdot \pmb v}{||\pmb u|| \cdot ||\pmb v||}
                                                    = \frac{\sum_{i \in I_{uv...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1263,14 +1283,11 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `Sarwar2001' on page 11 undefined on input line 330.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
 ! Undefined control sequence.
-l.333 \[sim(\pmb
+l.261 \[sim(\pmb
                  i, \pmb j) = \cos(\pmb i, \pmb j) = \frac {\pmb i \cdot \pm...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1279,7 +1296,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.333 \[sim(\pmb i, \pmb
+l.261 \[sim(\pmb i, \pmb
                          j) = \cos(\pmb i, \pmb j) = \frac {\pmb i \cdot \pm...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1288,7 +1305,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.333 \[sim(\pmb i, \pmb j) = \cos(\pmb
+l.261 \[sim(\pmb i, \pmb j) = \cos(\pmb
                                         i, \pmb j) = \frac {\pmb i \cdot \pm...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1297,7 +1314,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.333 \[sim(\pmb i, \pmb j) = \cos(\pmb i, \pmb
+l.261 \[sim(\pmb i, \pmb j) = \cos(\pmb i, \pmb
                                                 j) = \frac {\pmb i \cdot \pm...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1308,7 +1325,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> \pmb 
                 i \cdot \pmb j
-l.333 ...cdot \pmb j}{||\pmb i|| \cdot ||\pmb j||}
+l.261 ...cdot \pmb j}{||\pmb i|| \cdot ||\pmb j||}
                                                    = \frac{\sum_{u \in U_{ij...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1319,7 +1336,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> \pmb i \cdot \pmb 
                              j
-l.333 ...cdot \pmb j}{||\pmb i|| \cdot ||\pmb j||}
+l.261 ...cdot \pmb j}{||\pmb i|| \cdot ||\pmb j||}
                                                    = \frac{\sum_{u \in U_{ij...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1330,7 +1347,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ||\pmb 
                   i|| \cdot ||\pmb j||
-l.333 ...cdot \pmb j}{||\pmb i|| \cdot ||\pmb j||}
+l.261 ...cdot \pmb j}{||\pmb i|| \cdot ||\pmb j||}
                                                    = \frac{\sum_{u \in U_{ij...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1341,7 +1358,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ||\pmb i|| \cdot ||\pmb 
                                    j||
-l.333 ...cdot \pmb j}{||\pmb i|| \cdot ||\pmb j||}
+l.261 ...cdot \pmb j}{||\pmb i|| \cdot ||\pmb j||}
                                                    = \frac{\sum_{u \in U_{ij...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1349,10 +1366,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<cf-comparison.png, id=174, 970.62625pt x 580.1675pt>
+<cf-comparison.png, id=188, 970.62625pt x 580.1675pt>
 File: cf-comparison.png Graphic file (type png)
  <use cf-comparison.png>
-Package pdftex.def Info: cf-comparison.png used on input line 338.
+Package pdftex.def Info: cf-comparison.png used on input line 272.
 (pdftex.def)             Requested size: 420.0pt x 251.05177pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1362,7 +1379,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 12
  []
 
-[12 <./cf-comparison.png>]
+[12]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [13pdfTeX warning (ext4): destination with the same identifier (name{algocf.1}
@@ -1370,36 +1387,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.370 
-      ]
-Underfull \hbox (badness 10000) has occurred while \output is active
-\T1/ptm/m/n/10.95 14
- []
+l.299 
+       <./cf-comparison.png>]
 
-[14] [15
-
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-\T1/ptm/m/n/10.95 16
- []
-
-[16
-
-] <featureweights.png, id=209, 1040.688pt x 591.8913pt>
-File: featureweights.png Graphic file (type png)
-
-<use featureweights.png>
-Package pdftex.def Info: featureweights.png used on input line 400.
-(pdftex.def)             Requested size: 420.0pt x 238.87473pt.
- [17 <./featureweights.png>]
-
-Package hyperref Warning: Suppressing empty link on input line 406.
+Package hyperref Warning: Suppressing empty link on input line 303.
 
 ! Undefined control sequence.
-l.406 ...ing trees contain a score \(s \in \mathbb
+l.303 ...ing trees contain a score \(s \in \mathbb
                                                   {R}\). Multiple simple tre...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1407,8 +1401,17 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+\T1/ptm/m/n/10.95 14
+ []
+
+[14]
 ! Undefined control sequence.
-l.412 $$\text
+l.309 $$\text
              {obj}(\theta) = \sum_i^n l(y_i, \hat{y}_i) + \sum_{k=1}^K \Omeg...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1416,16 +1419,16 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<twocart.png, id=220, 564.9105pt x 276.43275pt>
+<twocart.png, id=221, 564.9105pt x 276.43275pt>
 File: twocart.png Graphic file (type png)
  <use twocart.png>
-Package pdftex.def Info: twocart.png used on input line 417.
+Package pdftex.def Info: twocart.png used on input line 314.
 (pdftex.def)             Requested size: 336.0pt x 164.41837pt.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.424 ...\(L\) with the regularization term \Omega
+l.321 ...\(L\) with the regularization term \Omega
                                                   .
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1433,24 +1436,13 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.425 
+l.322 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-\T1/ptm/m/n/10.95 18
- []
-
-[18
-
- <./twocart.png>]
 ! Undefined control sequence.
-l.426 $$\text
+l.323 $$\text
              {obj}(\theta) = L(\theta) + \Omega(\theta)$$
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1458,12 +1450,41 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[19] (./cic-tc.bbl
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15 <./twocart.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+\T1/ptm/m/n/10.95 16
+ []
+
+[16] [17]
+Underfull \hbox (badness 10000) has occurred while \output is active
+\T1/ptm/m/n/10.95 18
+ []
+
+[18
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19
+
+]
+<featureweights.png, id=250, 1040.688pt x 591.8913pt>
+File: featureweights.png Graphic file (type png)
+ <use featureweights.png>
+Package pdftex.def Info: featureweights.png used on input line 383.
+(pdftex.def)             Requested size: 420.0pt x 238.87473pt.
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 20
  []
 
-[20
+[20 <./featureweights.png>] (./cic-tc.bbl [21
 
 ]
 
@@ -1473,7 +1494,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.12   {KDD} {\textquotesingle}16}
+l.18   {KDD} {\textquotesingle}16}
                                   . [S.l.]: {ACM} Press, 2016.}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1486,48 +1507,83 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.36   {\textquotesingle}16}
+l.48 ...systems - {CHI} {EA} {\textquotesingle}06}
+                                                  . [S.l.]: {ACM} Press,
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \textquotesingle unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 ...systems - {CHI} {EA} {\textquotesingle}06}
+                                                  . [S.l.]: {ACM} Press,
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \textquotesingle unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.56   {\textquotesingle}16}
                             . [S.l.]: {ACM} Press, 2016.}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \textquotesingle unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62 ...rld Wide Web - {WWW} {\textquotesingle}01}
+                                                  . [S.l.]: {ACM} Press, 2001.}
+
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ) 
 AED: lastpage setting LastPage
-[21
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+\T1/ptm/m/n/10.95 22
+ []
+
+[22
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 462.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 462.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 411.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 411.
  (./cic-tc.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 462.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 462.
-
-
-Package rerunfilecheck Warning: File `cic-tc.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `cic-tc.out':
-(rerunfilecheck)             Before: E8934DA4C901344777E2D0D8DFBFA37B;2824
-(rerunfilecheck)             After:  970BEC1C7E75231B79BB538D0781CECB;2997.
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 462.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 411.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 411.
+Package rerunfilecheck Info: File `cic-tc.out' has not changed.
+(rerunfilecheck)             Checksum: 54FF652746265C12C1142C451B24A2AE;3210.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 411.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 20407 strings out of 492995
- 334855 string characters out of 6132704
- 428670 words of memory out of 5000000
- 23694 multiletter control sequences out of 15000+600000
+ 20433 strings out of 492995
+ 335302 string characters out of 6132704
+ 430432 words of memory out of 5000000
+ 23714 multiletter control sequences out of 15000+600000
  28207 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,15n,45p,10381b,2362s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,15n,45p,10381b,2374s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc
 }</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
@@ -1541,10 +1597,10 @@ exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/tex
 live/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/
 texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist
 /fonts/type1/urw/times/utmri8a.pfb>
-Output written on cic-tc.pdf (21 pages, 586836 bytes).
+Output written on cic-tc.pdf (22 pages, 594800 bytes).
 PDF statistics:
- 298 PDF objects out of 1000 (max. 8388607)
- 254 compressed objects within 3 object streams
- 61 named destinations out of 1000 (max. 500000)
- 168 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 324 PDF objects out of 1000 (max. 8388607)
+ 279 compressed objects within 3 object streams
+ 67 named destinations out of 1000 (max. 500000)
+ 184 words of extra memory for PDF output out of 10000 (max. 10000000)
 
