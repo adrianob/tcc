@@ -8,8 +8,10 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Overview of collaborative filtering techniques.}}{13}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces GbTree example}}{15}{figure.2.2}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces GbTree example}}{16}{figure.2.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Feature weights in gbtree}}{20}{figure.3.1}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Feature importance in Gradient Boosting Tree}}{22}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Dependence plot for category\_count}}{22}{figure.4.2}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

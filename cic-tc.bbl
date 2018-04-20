@@ -5,6 +5,12 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.1 }
 
+\bibitem[Aggarwal 2016]{Aggarwal2016}
+\abntrefinfo{Aggarwal}{AGGARWAL}{2016}
+{AGGARWAL, C.~C. \textbf{Recommender Systems: The Textbook}. Springer, 2016.
+ISBN 978-3-319-29659-3. Available from Internet:
+  \url{https://www.amazon.com/Recommender-Systems-Textbook-Charu-Aggarwal-ebook/dp/B01DK3GZDY?SubscriptionId=0JYN1NVW651KCA56C102&tag=techkie-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=B01DK3GZDY}.}
+
 \bibitem[Ansari, Essegaier and Kohli 2000]{Ansari2000}
 \abntrefinfo{Ansari, Essegaier and Kohli}{ANSARI; ESSEGAIER; KOHLI}{2000}
 {ANSARI, A.; ESSEGAIER, S.; KOHLI, R. Internet recommendation systems.
@@ -40,6 +46,11 @@
   collaborative filtering.
 \textbf{{IEEE} Internet Computing}, Institute of Electrical and Electronics
   Engineers ({IEEE}), v.~7, n.~1, p. 76--80, jan 2003.}
+
+\bibitem[Lundberg and Lee]{Lundberg2017}
+\abntrefinfo{Lundberg and Lee}{LUNDBERG; LEE}{}
+{LUNDBERG, S.; LEE, S.-I. A unified approach to interpreting model
+  predictions.}
 
 \bibitem[McNee, Riedl and Konstan 2006]{McNee2006}
 \abntrefinfo{McNee, Riedl and Konstan}{MCNEE; RIEDL; KONSTAN}{2006}
