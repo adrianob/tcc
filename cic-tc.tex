@@ -232,29 +232,70 @@ Along with the definition of the problem, it is important to define the desired 
 \item \emph{Diversity}: Recommender systems usually suggest a list of top-k items to the user. If all the recommended items are similar, there is an increased chance that the user won't like any of the items. On the other hand, if we show diversified items there is a higher change that the user will like at least one of them.
 \end{itemize}
 
-The sort of items recommended by such systems can vary tremendously. Apart from the most well known examples such as Amazon, which recommends products, and Netflix with movies, RSs are also used to recommend social connections in platforms such as Facebook, as well as news in news aggregators like Google News. Some of these systems will be discussed in further details in the next chapter.
+The sort of items recommended by such systems can vary tremendously. Apart from the most well known examples such as Amazon, which recommends products, and Netflix with movies, RSs are also used to recommend social connections in platforms such as Facebook, as well as news in news aggregators like Google News. Table  ~\ref{tbl:system_examples} shows a list of recommender systems used in real-world applications. Some of these systems will be discussed in further details in the next chapter.
+
+\begin{table}[h]
+    \caption{Example of recommended products by various real-world applications}
+    \centering
+        \begin{tabular}{c|p{5cm}}
+          \hline
+          \textit{System}  &   \textit{Product}  \\
+          \hline
+          \hline
+Amazon.com   & Books and other products  \\
+Netflix  & DVDs, Streaming Video  \\
+Jester  & Jokes  \\
+GroupLens  & News  \\
+MovieLens  & Movies  \\
+last.fm  & Music  \\
+Google News  & News  \\
+Google Search  & Advertisements  \\
+Facebook  & Friends, Advertisements  \\
+Pandora  & Music  \\
+YouTube  & Online videos  \\
+Tripadvisor  & Travel products  \\
+IMDb  & Movies  \\
+          \hline
+        \end{tabular}
+    \legend{Source: \cite{Aggarwal2016}}
+    \label{tbl:system_examples}
+\end{table}
 
 \section{About Catarse}
 Launched in January 2011, Catarse was the first crowdfunding platform for creative projects in Brazil. With over 7000 successfully financed projects raising R\$77m from 480.000 people, it's currently the largest national platform of its kind. It works similarly to most crowdfunding platforms: the project owner presents his or her idea and specifies the required investment as well as the cutoff date for the project, while offering rewards for those who back it. Projects are divided into 3 main categories: all-or-nothing, flexible and recurrent. In the first type, projects are available for backing up to 60 days and the project owner only receives the raised amount if the project's goal is met, otherwise all the money is returned to its original backers. On flexible projects, the owner receives the raised amount whether the goal is reached or not. Recurrent projects are subscription based and the owner can collect the money monthly.
 \section{Motivation}
 As of April 2018, over 1500 projects in 18 different categories are online and available for backing in Catarse. It would be unreasonable to expect users to browse through all projects before deciding which ones to back, as such some sort of ranking is fundamental when showing projects to users, and there is no doubt that the choice of this ranking will greatly affect conversion rates and successful funding of projects. At the time of writing, several ranking strategies are in use. Firstly, on the home page projects are shown ordered by popularity, defined simply by the pledged amount in the last 48 hours. Another section shows projects backed by Facebook friends, for those users who opted to connect their Facebook account. Finally, on the explore page, we also have filters for projects expiring soon. It should be noted that none of these sections, with the exception of backed by friends section, are tailored for each specific user: every user will see the same projects in the same order.
 
-Given the above, project recommendation can be considered a crucial aspect of Catarse's business model. We can expect any marginal improvement in this regard to be of great benefit to the company and its users. As such, a user-tailored recommendation system is expected to greatly increase user satisfaction and is fundamental to stay competitive in this market.
+Given the above, project recommendation can be considered a crucial aspect of Catarse's business model. We can expect any marginal improvement in this regard to be of great benefit to the company and its users. Therefore, a user-tailored recommendation system is expected to greatly increase user satisfaction and is fundamental to stay competitive in this market.
+
+\section{Goals}
+This work aims to implement and compare the main strategies used in RSs in the context of a large-scale Crowdfunding website. Several metrics will be used to determine the best approach, which will then be used in production. Our primary goal is to find a strategy that is at least better than the current popularity ranking, which is usually hard to beat in realistic scenarios.
+
+\chapter{Related Work}
+\section{GroupLens Recommender System}
+One of the first recommender systems to be developed, Grouplens was used for recommendations of Usenet news. It worked by collecting ratings from many Usenet readers in order to recommend new articles to users, a technique now known as Collaborative Filtering.
+This approach was later extended to other settings such as books and movies, referred to as Booklens and Movielens respectively. One important contribution of this research was the release of several data sets of user ratings to the community, which were not easily available at the time. One of these data sets, Movielens, is still widely used in RS research to this day.
+\section{Netflix Recommender System}
+Netflix recommendations are obtained through user ratings on a 5-point scale as well as implicit ratings, such as the action of watching a movie. One interesting aspect of their system is in the quality of explanations provided to the recommendations. For instance, a list of recommendations can be pinpointed to having watched a specific movie. This approach can help users in deciding what to watch and improve customer loyalty and retention.
+
+The Netflix Prize contest was a competition organized by Netflix that ran from 2006 to 2009. Contestants were given a data set of existing user ratings and were expected to outperform Netflix's own recommendation algorithm, Cinematch. This contest was responsible for many notable contributions to recommendations research, such as latent factor models.
 
 \chapter{Theoretical Background}
 In this chapter the main concepts behind Recommender Systems will be reviewed. We will study the most common approaches used in the industry today, and give a detailed comparison of their general characteristics, as well as provide insights relevant to our particular case. For each approach, we give descriptions of the most used algorithms along with state-of-the-art techniques that were used in this work.
 
 \section{Recommender Systems}
 Recommender systems can be broadly divided into two categories: content-based methods and collaborative filtering methods \cite{Rakesh2016}.
-The former utilizes the content features of users or items in order to recommend items to users. In collaborative filtering methods, user ratings are used in order to calculate similarities between users or items, which are then ranked to show the most relevant recommendations. These two methods are sometimes combined into what is known as Hybrid Recommender Systems.
+The former utilizes the content features of users or items, such as relevant keywords, in order to recommend items to users. In collaborative filtering methods, user ratings are used in order to calculate similarities between users or items, which are then ranked to show the most relevant recommendations. It is important to notice that Content-Based models also use the ratings matrix in most cases, however the model usually focus on the ratings of a single user, instead of attempting to discover inter-user relationships. These two methods are sometimes combined into what is known as Hybrid Recommender Systems. Hybrid systems can combine the strengths of various models in order to perform more robustly in a wide variety of settings.
 
 The basic idea behind any recommender system is to obtain a utility function to estimate a user preferences towards an item. The meaning of this function will differ for each context; it could mean how likely a user will want to watch a specific movie or listen to a song, or the likelihood of buying a particular product. In our case, the goal is to find projects the customer is most likely to back given his backing history and other characteristics. 
 
 
 \subsection{Collaborative filtering}
-Collaborative filtering is based on the principle that similar users will share similar interests. In the traditional approach, each customer is represented by a \(N\)-dimensional vector of items, where \(N\) stands for the number of available items, and each vector component corresponds to the user rating of the item. These ratings can be obtained explicitly - e.g. star rating or "likes" - or implicitly - e.g. a user buying an item or listening to a song can be considered a positive rating. By collecting ratings from each user, we build a \(R_{nxm}\) matrix which is the starting point for CF. For most applications, \(R\) will be extremely sparse, our job then is to try to predict the missing ratings.
+Collaborative filtering is based on the principle that similar users will share similar interests. Assuming that ratings are highly correlated across various users and items, it is possible to predict a rating not yet given by the user. For example, if the algorithm identifies that user Alice and Bob have similar tastes, it is likely that the ratings in which only one of them has given a rating will also be similar. In the traditional approach, each customer is represented by a \(N\)-dimensional vector of items, where \(N\) stands for the number of available items, and each vector component corresponds to the user rating of the item. These ratings can be obtained explicitly - e.g. star rating or "likes" - or implicitly - e.g. a user buying an item or listening to a song can be considered a positive rating. By collecting ratings from each user, we build a \(R_{nxm}\) matrix which is the starting point for CF. For most applications, \(R\) will be extremely sparse. Our job is to try to predict the missing ratings, for this to be possible most models focus on leveraging inter-item or inter-user correlations.
 
-CF algorithms can be further divided into Memory-Based and Model-Based approaches. Memory-Based algorithms use a dataset of user-item pairs to identify groups of similar users, which are in turn used to make predictions of preference for new items. In Model-Based methods, machine learning algorithms are used to develop a model that will be used to predict user ratings. These methods can solve some of the shortcomings of Memory-Based approaches, such as the need for large rating matrices. Finally, both approaches can be combined into Hybrid Recommenders. A overview of these techniques is depicted in figure ~\ref{fig:cf-comparison}.
+CF algorithms can be further divided into Memory-Based and Model-Based approaches. Memory-Based algorithms, also referred to as \textit{neighborhood-based collaborative filtering algorithms}, use a dataset of user-item pairs to identify groups of similar users or items, which are in turn used to make predictions of preference for new items. These where among the earliest CF methods proposed. Although very simple to implement, these methods often have trouble with very sparse matrices.
+
+In Model-Based methods, machine learning and data mining algorithms are used to develop a model that will be used to predict user ratings. Some examples include decision trees, rule-based models, Bayesian methods and latent factor models. These methods can solve some of the shortcomings of Memory-Based approaches, such as the need for large rating matrices. Finally, both approaches can be combined into Hybrid Recommenders. A overview of these techniques is depicted in figure ~\ref{fig:cf-comparison}.
 
 \subsubsection{Neighbourhood methods}
 Neighborhood methods take rows or columns of \(R\) and compute a similarity value between them. If the rows correspond to users and the columns to items, we can obtain the similarity between two users \(u\) and \(v\) by computing the correlation between \(R(u)\) and \(R(v)\). In the same fashion, similarity between items \(i\) and \(j\) can be computed by taking \(R^T(i)\) and \(R^T(j)\).
@@ -315,7 +356,7 @@ In either case, for this to work large amounts of user data is required. This is
 \subsection{Content-based filtering}
 In this approach a description of each item is constructed using structured data or some sort of item presentation algorithm such as Latent Dirichlet Allocation (LDA) or TF-IDF. This representation is then compared to the user profile and the best-matching items are recommended. The user profile can consist of many different types of information: a history of the user's interaction with the system such as page views, searches and purchases is often used to train the model without any explicit user input. Some systems may require the user to explicitly state his interests, however it may be very hard to get users to make this effort, rendering this approach very limited in practice.
 
-As CBF focus on item rather than user similarity, it avoids the cold start problem since little information about user preference is needed. However, since only similar items to those already rated by the user will be considered, CBF strategies tend to suffer from over-specialization \cite{Iaquinta2008}. This is known as the serendipity problem. Another limitation of CBF algorithms is that items are required to contain enough information in order to distinguish items the user likes from items the user doesn't like. For example, a dataset of songs where only the song name is available would not be enough to make good predictions based on this content only, however this would pose no problem for collaborative filtering methods which rely solely on user similarity. 
+As CBF focus on item rather than user similarity, it avoids the cold start problem since little information about user preference is needed. For instance, if user Bob rated movie $A$ but no other ratings are available for the movie, it is still possible to recommend other movies based on the attributes of movie $A$, such as genre keywords or release date. However, since only similar items to those already rated by the user will be considered, CBF strategies tend to suffer from over-specialization \cite{Iaquinta2008}. This is known as the serendipity problem. Another limitation of CBF algorithms is that items are required to contain enough information in order to distinguish items the user likes from items the user doesn't like. For example, a dataset of songs where only the song name is available would not be enough to make good predictions based on this content only, however this would pose no problem for collaborative filtering methods which rely solely on user similarity. Finally, while CB methods excel in recommending new items, they are not effective when it comes to new users. This is because the training model requires a rating history in order to make robust predictions.
 
 \subsubsection{Gradient boosting trees}
 In recent years, tree boosting has become a increasingly popular method and been shown to give state-of-the-art results for many classification problems \cite{Li2012}. As in any supervised learning method, our objective is to train a model to predict a target variable \(y_i\) given features \(x_i\). Boosting methods are characterized by combining many weak learners into a strong one in a iterative fashion. In this case, our model is an ensemble of trees, more specifically a set of classification and regression trees (CART). Unlike decision trees, where the leafs contain decision values, the leafs on gradient boosting trees contain a score \(s \in \mathbb{R}\). Multiple simple trees are then constructed and the prediction of each tree is summed up to get the final score ~\ref{fig:ex1}. Our model can then be defined as
@@ -350,7 +391,16 @@ $$\Omega(f) = \gamma T + \frac{1}{2}\lambda \sum_{j=1}^T w_j^2$$
 
 where \(w\) is the vector of scores on leaves and \(T\) is the number of leaves.
 
-After defining our objective function, we optimize it in order to train our model.
+After some simplification our objective function becomes:
+$$
+\begin{split}
+\text{obj}^\ast = -\frac{1}{2} \sum_{j=1}^T \frac{G_j^2}{H_j+\lambda} + \gamma T
+\end{split}
+$$
+Finally, we compute the score gain obtained by splitting a leaf into two leaves. Our model is then trained by optimizing for one level of the tree at a time:
+$$
+Gain = \frac{1}{2} \left[\frac{G_L^2}{H_L+\lambda}+\frac{G_R^2}{H_R+\lambda}-\frac{(G_L+G_R)^2}{H_L+H_R+\lambda}\right] - \gamma
+$$
 
 \chapter{Experimental Methodology}
 This chapter describes how we prepared the training data used in our experiment. Later we discuss possible evaluation metrics that are commonly used in recommender systems, listing its main benefits and shortcomings.
@@ -434,6 +484,7 @@ To determine how individual features effect the output of the model, let's take 
 \section{Collaborative Filtering}
 Our Collaborative Filtering model was implemented using the LightFM library. 
 \section{Hybrid}
+Hybrid ratings were computed by multiplying the ratings obtained by the CF and CB methods. By doing this, we hope to compensate any weaknesses in the original techniques and sum its strengths.
 \section{Comparison}
 The Recall@N metric evaluates whether a item the user has rated in the past is in the top N recommendations from a random set of projects. It works as follows: a set of 100 random projects is augmented with a project the user has interacted previously, we then measure if the interacted project is present in the top N recommendations. For this work, we measure the Recall@10 for each proposed algorithm.
 \begin{table}[h]
