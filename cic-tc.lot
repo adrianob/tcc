@@ -11,6 +11,8 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Offline metrics}}{26}{table.5.1}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Content-Based Offline metrics}}{27}{table.5.1}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Collaborative Filtering Offline metrics}}{27}{table.5.2}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Offline metrics}}{28}{table.5.3}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

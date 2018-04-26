@@ -279,6 +279,8 @@ This approach was later extended to other settings such as books and movies, ref
 Netflix recommendations are obtained through user ratings on a 5-point scale as well as implicit ratings, such as the action of watching a movie. One interesting aspect of their system is in the quality of explanations provided to the recommendations. For instance, a list of recommendations can be pinpointed to having watched a specific movie. This approach can help users in deciding what to watch and improve customer loyalty and retention.
 
 The Netflix Prize contest was a competition organized by Netflix that ran from 2006 to 2009. Contestants were given a data set of existing user ratings and were expected to outperform Netflix's own recommendation algorithm, Cinematch. This contest was responsible for many notable contributions to recommendations research, such as latent factor models.
+\section{Kickstarter Recommender System}
+Kickstarter initial implementation of its recommender system used a Collaborative Filtering approach, written entirely in MySQL. Later, Content-Based recommendations based on the similarity of the text was used, computed by Latent Semantic Indexing (LSI). Both these approaches were later combined into the current Hybrid system. For the initial tests, the "popular projects" ranking was used as a baseline for comparing new algorithms.
 
 \chapter{Theoretical Background}
 In this chapter the main concepts behind Recommender Systems will be reviewed. We will study the most common approaches used in the industry today, and give a detailed comparison of their general characteristics, as well as provide insights relevant to our particular case. For each approach, we give descriptions of the most used algorithms along with state-of-the-art techniques that were used in this work.
@@ -460,6 +462,8 @@ Catarse's dataset is unique in a variety of ways that makes collaborative filter
 
 
 \chapter{Results}
+In this chapter we give results for our offline, online and empirical metrics. The computed offline metrics were accuracy, recall, and precision. Accuracy is simply a ratio of correctly predicted observation to the total observations. Recall is defined as $tp / (tp + fn)$, where $tp$ is the number of true positives and $fn$ the number of false negatives. Finally precision is given by $tp / (tp + fp)$ where $tp$ is the number of true positives and $fp$ the number of false positives.
+
 \section{Content-Based}
 The XGBoost python library was used to create our gradient boosting tree model. Hyperparameters were tuned by running 10-fold cross validation while optimizing for negative log-likelihood. No data standardization or normalization was necessary since the base learners are trees. In order to understand how each feature affects the outcome prediction in our model, we plot the SHAP \cite{Lundberg2017} values of every feature for every sample in figure ~\ref{fig:features_importance}. From this plot we can draw some interesting conclusions: the most important feature in determining backing probability is the number of backed projects in the same category, followed closely by the project progress in the first 3 days. We can also see that having a low number of available rewards decreases backing probability.
 
@@ -473,6 +477,24 @@ The XGBoost python library was used to create our gradient boosting tree model. 
 
 To determine how individual features effect the output of the model, let's take our most significant feature, $category\_count$, and plot its value against the corresponding SHAP value for all examples in our dataset. Vertical dispersion shows the interaction between features, in this case how $category\_count$ relates to $reward\_count$. The result is shown in figure ~\ref{fig:category_count}.
 
+This approach gave exceptional results in every computed offline metric, as seen on table ~\ref{tbl:cb_offline_metrics}. This, however, should be considered with care: our dataset is intrinsically predictable to the point that any method should give great results. For example, a simple test to check if the $category\_count$ feature is greater than zero already yields us an accuracy of $94.5\%$. This is due to the fact that most users only back one project in one category.
+
+\begin{table}[h]
+    \caption{Content-Based Offline metrics}
+    % OBS: não use \begin{center}, pois este aumenta o espaçamento entre a caption/legend e a tabela
+    % Para figuras, a aparência é melhor com o espaçamento extra
+    \centering
+        \begin{tabular}{c|c|p{5cm}}
+          \hline
+          \textit{Recall}  &   \textit{Accuracy}  &   \textit{Precision} \\
+          \hline
+          \hline
+          0.990450           & 0.986260 &  0.982813 \\
+          \hline
+        \end{tabular}
+    \label{tbl:cb_offline_metrics}
+\end{table}
+
 \begin{figure}
     \caption{Dependence plot for category\_count}
     \begin{center}
@@ -482,9 +504,27 @@ To determine how individual features effect the output of the model, let's take 
 \end{figure}
 
 \section{Collaborative Filtering}
-Our Collaborative Filtering model was implemented using the LightFM library. 
+Our Collaborative Filtering model was implemented using the LightFM library. As depicted on table ~\ref{tbl:cb_offline_metrics}, every offline metric performed much worse than its Content-Based counterpart. This was expected due to our dataset characteristics: since most users only back one project in their lifetime there is not enough rating data for CF to perform well. However, testing with real users provided much better results.
+
+Calculating error metrics poses a problem for CF algorithms that produce ranked recommendations. The values returned in our prediction function possess no meaning whatsoever; they are used for ranking purposes only. Therefore it is impossible to compute an error metric since we don't have two sets of comparable values to test for equality. However, it is possible to obtain an error metric in the context of our hybrid approach: in order to multiply the prediction values of both algorithms we first normalize CF predictions so they stay in the $0-1$ range. We then consider any normalized prediction greater than $0.5$ to be in the positive class, and negative otherwise. This gives us an accuracy of approximately $93\%$, or equivalently an error of $7\%$.
+
+
+\begin{table}[h]
+    \caption{Collaborative Filtering Offline metrics}
+    \centering
+        \begin{tabular}{c|c|c|p{5cm}}
+          \hline
+          \textit{Recall@5}  &   \textit{Recall@10}  &   \textit{Precision@5} &   \textit{Precision@10} \\
+          \hline
+          \hline
+          0.06500372900657606           & 0.0925860086205232 &  0.015118373  & 0.010974493  \\
+          \hline
+        \end{tabular}
+    \label{tbl:cb_offline_metrics}
+\end{table}
+
 \section{Hybrid}
-Hybrid ratings were computed by multiplying the ratings obtained by the CF and CB methods. By doing this, we hope to compensate any weaknesses in the original techniques and sum its strengths.
+Hybrid ratings were computed by multiplying the ratings obtained by the CB method by the normalized CF ratings. By doing this, we hope to compensate any weaknesses in the original techniques and sum its strengths.
 \section{Comparison}
 The Recall@N metric evaluates whether a item the user has rated in the past is in the top N recommendations from a random set of projects. It works as follows: a set of 100 random projects is augmented with a project the user has interacted previously, we then measure if the interacted project is present in the top N recommendations. For this work, we measure the Recall@10 for each proposed algorithm.
 \begin{table}[h]
@@ -494,11 +534,11 @@ The Recall@N metric evaluates whether a item the user has rated in the past is i
     \centering
         \begin{tabular}{c|c|c|p{5cm}}
           \hline
-          \textit{Method}  &   \textit{Recall}  &   \textit{Accuracy}  &   \textit{Precision@10} \\
+          \textit{Method}  &   \textit{Recall}  &   \textit{Accuracy}  &   \textit{Precision} \\
           \hline
           \hline
-          Content-Based           &   0.990450           & 0.986260 &  1.0 \\
-          Collaborative Filtering     & 0.08933075             & Val 3  & 0.010246\\
+          Content-Based           &   0.990450           & 0.986260 &  0.982813 \\
+          Collaborative Filtering     & 0.08933075             & 0.9329^*  & 0.010246\\
           Hybrid     & 0.08933075             & Val 3  & 0.010246\\
           \hline
         \end{tabular}
