@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  26 APR 2018 16:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  26 APR 2018 18:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1158,6 +1158,13 @@ text indent calculated (toc, 1): 21.0pt
 number indent calculated (toc, 1): 18.0pt
 text noindent (toc, 1): 39.0pt
 number noindent (toc, 1): 0.0pt
+number indent by \l@... (toc, 1):  18.0pt
+text indent by \l@... (toc, 1):  27.60004pt
+number indent by parent (toc, 1):  18.0pt
+text indent calculated (toc, 1): 21.0pt
+number indent calculated (toc, 1): 18.0pt
+text noindent (toc, 1): 39.0pt
+number noindent (toc, 1): 0.0pt
 number indent by \l@... (toc, 0):  0.0pt
 text indent by \l@... (toc, 0):  18.0pt
 number indent by parent (toc, 0):  0.0pt
@@ -1520,7 +1527,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<cf-comparison.png, id=275, 970.62625pt x 580.1675pt>
+<cf-comparison.png, id=279, 970.62625pt x 580.1675pt>
 File: cf-comparison.png Graphic file (type png)
  <use cf-comparison.png>
 Package pdftex.def Info: cf-comparison.png used on input line 333.
@@ -1573,7 +1580,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<twocart.png, id=308, 564.9105pt x 276.43275pt>
+<twocart.png, id=312, 564.9105pt x 276.43275pt>
 File: twocart.png Graphic file (type png)
  <use twocart.png>
 Package pdftex.def Info: twocart.png used on input line 375.
@@ -1673,7 +1680,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 Package hyperref Warning: Suppressing empty link on input line 468.
 
-<feature_contribution.png, id=343, 1040.688pt x 591.8913pt>
+<feature_contribution.png, id=347, 1040.688pt x 591.8913pt>
 File: feature_contribution.png Graphic file (type png)
 
 <use feature_contribution.png>
@@ -1683,7 +1690,7 @@ Package pdftex.def Info: feature_contribution.png used on input line 473.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<category_count.png, id=347, 1040.688pt x 591.8913pt>
+<category_count.png, id=351, 1040.688pt x 591.8913pt>
 File: category_count.png Graphic file (type png)
  <use category_count.png>
 Package pdftex.def Info: category_count.png used on input line 501.
@@ -1722,7 +1729,10 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-[27]
+
+Underfull \vbox (badness 3219) has occurred while \output is active []
+
+ [27]
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 28
  []
@@ -1811,15 +1821,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 566.
  (./cic-tc.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 566.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 566.
+Package rerunfilecheck Info: File `cic-tc.out' has not changed.
+(rerunfilecheck)             Checksum: ABE7C12A5B81B154432BF1B77DF6705E;5242.
 
-
-Package rerunfilecheck Warning: File `cic-tc.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `cic-tc.out':
-(rerunfilecheck)             Before: C63A374A1E05205B938C750FA208BE41;5008
-(rerunfilecheck)             After:  ABE7C12A5B81B154432BF1B77DF6705E;5242.
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1830,10 +1834,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 566.
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 20592 strings out of 492995
- 338388 string characters out of 6132704
+ 20593 strings out of 492995
+ 338401 string characters out of 6132704
  433019 words of memory out of 5000000
- 23841 multiletter control sequences out of 15000+600000
+ 23842 multiletter control sequences out of 15000+600000
  35372 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  48i,15n,45p,10381b,2454s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1851,10 +1855,10 @@ live/2017/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2
 017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-
 dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts
 /type1/urw/times/utmri8a.pfb>
-Output written on cic-tc.pdf (30 pages, 880350 bytes).
+Output written on cic-tc.pdf (30 pages, 880769 bytes).
 PDF statistics:
- 448 PDF objects out of 1000 (max. 8388607)
- 389 compressed objects within 4 object streams
+ 452 PDF objects out of 1000 (max. 8388607)
+ 393 compressed objects within 4 object streams
  91 named destinations out of 1000 (max. 500000)
- 269 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 277 words of extra memory for PDF output out of 10000 (max. 10000000)
 

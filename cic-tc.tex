@@ -524,7 +524,7 @@ Calculating error metrics poses a problem for CF algorithms that produce ranked 
 \end{table}
 
 \section{Hybrid}
-Hybrid ratings were computed by multiplying the ratings obtained by the CB method by the normalized CF ratings. By doing this, we hope to compensate any weaknesses in the original techniques and sum its strengths.
+Hybrid ratings were computed by multiplying the ratings obtained by the CB method by the normalized CF ratings. By doing this, we hope to compensate any weaknesses in the original techniques and leverage its strengths. For example, a project highly rated by our CB algorithm but rated lowly by the CF algorithm could show that, although its features seem to indicate a good match for the user, similar users are not backing it in practice. By multiplying both ratings such a project would rank much lower in the recommendation list, allowing better matching projects to appear in higher positions.
 \section{Comparison}
 The Recall@N metric evaluates whether a item the user has rated in the past is in the top N recommendations from a random set of projects. It works as follows: a set of 100 random projects is augmented with a project the user has interacted previously, we then measure if the interacted project is present in the top N recommendations. For this work, we measure the Recall@10 for each proposed algorithm.
 \begin{table}[h]

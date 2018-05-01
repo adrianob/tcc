@@ -26,6 +26,6 @@
 \contentsline {section}{\numberline {5.1}Content-Based}{25}{section.5.1}
 \contentsline {section}{\numberline {5.2}Collaborative Filtering}{27}{section.5.2}
 \contentsline {section}{\numberline {5.3}Hybrid}{27}{section.5.3}
-\contentsline {section}{\numberline {5.4}Comparison}{27}{section.5.4}
+\contentsline {section}{\numberline {5.4}Comparison}{28}{section.5.4}
 \contentsline {chapter}{6~Conclusion}{29}{CHAPTER.6}
 \contentsline {chapter}{\xspace {}References}{30}{schapter.5}
