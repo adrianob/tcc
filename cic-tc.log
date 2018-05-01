@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  26 APR 2018 18:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  1 MAY 2018 14:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -886,50 +886,116 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \c@algocf=\count159
 \algocf@algoframe=\box51
 \algocf@algobox=\box52
-) (./cic-tc.aux
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks26
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/11/05 v2.16a AMS math features
+\@mathmargin=\skip96
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks27
+\ex@=\dimen164
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen165
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count160
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count161
+\leftroot@=\count162
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count163
+\DOTSCASE@=\count164
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+\big@size=\dimen166
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count165
+\c@MaxMatrixCols=\count166
+\dotsspace@=\muskip17
+\c@parentequation=\count167
+\dspbrk@lvl=\count168
+\tag@help=\toks28
+\row@=\count169
+\column@=\count170
+\maxfields@=\count171
+\andhelp@=\toks29
+\eqnshift@=\dimen167
+\alignsep@=\dimen168
+\tagshift@=\dimen169
+\tagwidth@=\dimen170
+\totwidth@=\dimen171
+\lineht@=\dimen172
+\@envbody=\toks30
+\multlinegap=\skip97
+\multlinetaggap=\skip98
+\mathdisplay@stack=\toks31
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+(./cic-tc.aux
 
 LaTeX Warning: Label `tbl:cb_offline_metrics' multiply defined.
 
 )
 \openout1 = `cic-tc.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 107.
-LaTeX Font Info:    ... okay on input line 107.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 107.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 113.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 107.
+(lastpage)             ! on input line 113.
 
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count160
-\scratchdimen=\dimen164
-\scratchbox=\box53
-\nofMPsegments=\count161
-\nofMParguments=\count162
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count163
-\MPscratchDim=\dimen165
-\MPnumerator=\count164
-\makeMPintoPDFobject=\count165
-\everyMPtoPDFconversion=\toks27
+\scratchcounter=\count172
+\scratchdimen=\dimen173
+\scratchbox=\box55
+\nofMPsegments=\count173
+\nofMParguments=\count174
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count175
+\MPscratchDim=\dimen174
+\MPnumerator=\count176
+\makeMPintoPDFobject=\count177
+\everyMPtoPDFconversion=\toks33
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -948,26 +1014,30 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 107.
-Package tocstyle Info: prepare \l@part for redefinition on input line 107.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 113.
+Package tocstyle Info: prepare \l@part for redefinition on input line 113.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 107.
-Package tocstyle Info: prepare \l@chapter for redefinition on input line 107.
-Package tocstyle Info: prepare \l@section for redefinition on input line 107.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 107.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 107.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 107.
-Package tocstyle Info: prepare \l@subsection for redefinition on input line 107
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 113.
+Package tocstyle Info: prepare \l@chapter for redefinition on input line 113.
+Package tocstyle Info: prepare \l@section for redefinition on input line 113.
+LaTeX Font Info:    Try loading font information for U+msa on input line 113.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 113.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Package tocstyle Info: prepare \l@subsection for redefinition on input line 113
 .
 Package tocstyle Info: prepare \l@subsubsection for redefinition on input line 
-107.
-Package tocstyle Info: prepare \l@table for redefinition on input line 107.
-Package tocstyle Info: prepare \l@figure for redefinition on input line 107.
-\AtBeginShipoutBox=\box54
-Package hyperref Info: Link coloring ON on input line 107.
+113.
+Package tocstyle Info: prepare \l@table for redefinition on input line 113.
+Package tocstyle Info: prepare \l@figure for redefinition on input line 113.
+\AtBeginShipoutBox=\box56
+Package hyperref Info: Link coloring ON on input line 113.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -975,11 +1045,11 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count166
+\c@section@level=\count178
 )
-LaTeX Info: Redefining \ref on input line 107.
-LaTeX Info: Redefining \pageref on input line 107.
-LaTeX Info: Redefining \nameref on input line 107.
+LaTeX Info: Redefining \ref on input line 113.
+LaTeX Info: Redefining \pageref on input line 113.
+LaTeX Info: Redefining \nameref on input line 113.
 
 (./cic-tc.out) (./cic-tc.out)
 \@outlinefile=\write3
@@ -1027,12 +1097,12 @@ LaTeX Info: Redefining \nameref on input line 107.
 
 
 ]
-LaTeX Font Info:    Try loading font information for T1+phv on input line 119.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 125.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 119.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 125.
  [3
 
 ]
@@ -1312,7 +1382,7 @@ number noindent (toc, 0): 0.0pt
  [7
 
 ]
-Overfull \hbox (5.73024pt too wide) in paragraph at lines 217--218
+Overfull \hbox (5.73024pt too wide) in paragraph at lines 223--224
 []\T1/ptm/m/n/12 Since time im-memo-rial, peo-ple have re-lied on rec-om-men-da
 -tions from many sources
  []
@@ -1363,174 +1433,13 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [14
 
 ]
-! Undefined control sequence.
-l.307 \[sim(\pmb
-                 u, \pmb v) = \cos(\pmb u, \pmb v) = \frac {\pmb u \cdot \pm...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.307 \[sim(\pmb u, \pmb
-                         v) = \cos(\pmb u, \pmb v) = \frac {\pmb u \cdot \pm...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.307 \[sim(\pmb u, \pmb v) = \cos(\pmb
-                                        u, \pmb v) = \frac {\pmb u \cdot \pm...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.307 \[sim(\pmb u, \pmb v) = \cos(\pmb u, \pmb
-                                                v) = \frac {\pmb u \cdot \pm...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> \pmb 
-                u \cdot \pmb v
-l.307 ...cdot \pmb v}{||\pmb u|| \cdot ||\pmb v||}
-                                                   = \frac{\sum_{i \in I_{uv...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> \pmb u \cdot \pmb 
-                             v
-l.307 ...cdot \pmb v}{||\pmb u|| \cdot ||\pmb v||}
-                                                   = \frac{\sum_{i \in I_{uv...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ||\pmb 
-                  u|| \cdot ||\pmb v||
-l.307 ...cdot \pmb v}{||\pmb u|| \cdot ||\pmb v||}
-                                                   = \frac{\sum_{i \in I_{uv...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ||\pmb u|| \cdot ||\pmb 
-                                   v||
-l.307 ...cdot \pmb v}{||\pmb u|| \cdot ||\pmb v||}
-                                                   = \frac{\sum_{i \in I_{uv...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [15]
-! Undefined control sequence.
-l.322 \[sim(\pmb
-                 i, \pmb j) = \cos(\pmb i, \pmb j) = \frac {\pmb i \cdot \pm...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.322 \[sim(\pmb i, \pmb
-                         j) = \cos(\pmb i, \pmb j) = \frac {\pmb i \cdot \pm...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.322 \[sim(\pmb i, \pmb j) = \cos(\pmb
-                                        i, \pmb j) = \frac {\pmb i \cdot \pm...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.322 \[sim(\pmb i, \pmb j) = \cos(\pmb i, \pmb
-                                                j) = \frac {\pmb i \cdot \pm...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> \pmb 
-                i \cdot \pmb j
-l.322 ...cdot \pmb j}{||\pmb i|| \cdot ||\pmb j||}
-                                                   = \frac{\sum_{u \in U_{ij...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> \pmb i \cdot \pmb 
-                             j
-l.322 ...cdot \pmb j}{||\pmb i|| \cdot ||\pmb j||}
-                                                   = \frac{\sum_{u \in U_{ij...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ||\pmb 
-                  i|| \cdot ||\pmb j||
-l.322 ...cdot \pmb j}{||\pmb i|| \cdot ||\pmb j||}
-                                                   = \frac{\sum_{u \in U_{ij...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ||\pmb i|| \cdot ||\pmb 
-                                   j||
-l.322 ...cdot \pmb j}{||\pmb i|| \cdot ||\pmb j||}
-                                                   = \frac{\sum_{u \in U_{ij...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
 <cf-comparison.png, id=279, 970.62625pt x 580.1675pt>
 File: cf-comparison.png Graphic file (type png)
  <use cf-comparison.png>
-Package pdftex.def Info: cf-comparison.png used on input line 333.
+Package pdftex.def Info: cf-comparison.png used on input line 339.
 (pdftex.def)             Requested size: 420.0pt x 251.05177pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1548,19 +1457,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.360 
+l.366 
        <./cf-comparison.png>]
 
-Package hyperref Warning: Suppressing empty link on input line 364.
-
-! Undefined control sequence.
-l.364 ...ing trees contain a score \(s \in \mathbb
-                                                  {R}\). Multiple simple tre...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Package hyperref Warning: Suppressing empty link on input line 370.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1570,87 +1470,15 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 18
  []
 
-[18]
-! Undefined control sequence.
-l.370 $$\text
-             {obj}(\theta) = \sum_i^n l(y_i, \hat{y}_i) + \sum_{k=1}^K \Omeg...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-<twocart.png, id=312, 564.9105pt x 276.43275pt>
+[18] <twocart.png, id=313, 564.9105pt x 276.43275pt>
 File: twocart.png Graphic file (type png)
  <use twocart.png>
-Package pdftex.def Info: twocart.png used on input line 375.
+Package pdftex.def Info: twocart.png used on input line 381.
 (pdftex.def)             Requested size: 336.0pt x 164.41837pt.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.382 ...\(L\) with the regularization term \Omega
-                                                  .
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.383 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Undefined control sequence.
-l.384 $$\text
-             {obj}(\theta) = L(\theta) + \Omega(\theta)$$
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [19 <./twocart.png>]
-
-! LaTeX Error: Environment split undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.398 \begin{split}
-                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Undefined control sequence.
-l.399 \text
-           {obj}^\ast = -\frac{1}{2} \sum_{j=1}^T \frac{G_j^2}{H_j+\lambda} ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-! LaTeX Error: \begin{document} ended by \end{split}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.400 \end{split}
-                 
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 20
  []
@@ -1678,22 +1506,22 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [24]
 
-Package hyperref Warning: Suppressing empty link on input line 468.
+Package hyperref Warning: Suppressing empty link on input line 472.
 
-<feature_contribution.png, id=347, 1040.688pt x 591.8913pt>
+<feature_contribution.png, id=348, 1040.688pt x 591.8913pt>
 File: feature_contribution.png Graphic file (type png)
 
 <use feature_contribution.png>
-Package pdftex.def Info: feature_contribution.png used on input line 473.
+Package pdftex.def Info: feature_contribution.png used on input line 477.
 (pdftex.def)             Requested size: 426.79135pt x 242.74022pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<category_count.png, id=351, 1040.688pt x 591.8913pt>
+<category_count.png, id=352, 1040.688pt x 591.8913pt>
 File: category_count.png Graphic file (type png)
  <use category_count.png>
-Package pdftex.def Info: category_count.png used on input line 501.
+Package pdftex.def Info: category_count.png used on input line 505.
 (pdftex.def)             Requested size: 426.79135pt x 242.74022pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1706,28 +1534,9 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [26 <./feature_contribution.png> <./category_count.png>]
-Overfull \hbox (43.67241pt too wide) in paragraph at lines 515--524
+Overfull \hbox (43.67241pt too wide) in paragraph at lines 519--528
  [][] 
  []
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.541 ...ng     & 0.08933075             & 0.9329^
-                                                  *  & 0.010246\\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.541 ...   & 0.08933075             & 0.9329^*  &
-                                                   0.010246\\
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
 
 
 Underfull \vbox (badness 3219) has occurred while \output is active []
@@ -1816,31 +1625,31 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [30
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 566.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 566.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 570.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 570.
  (./cic-tc.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 566.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 566.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 570.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 570.
 Package rerunfilecheck Info: File `cic-tc.out' has not changed.
 (rerunfilecheck)             Checksum: ABE7C12A5B81B154432BF1B77DF6705E;5242.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 566.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 570.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 20593 strings out of 492995
- 338401 string characters out of 6132704
- 433019 words of memory out of 5000000
- 23842 multiletter control sequences out of 15000+600000
- 35372 words of font info for 42 fonts, out of 8000000 for 9000
+ 21251 strings out of 492995
+ 346206 string characters out of 6132704
+ 445584 words of memory out of 5000000
+ 24468 multiletter control sequences out of 15000+600000
+ 38925 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,15n,45p,10381b,2454s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,15n,45p,10381b,3234s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc
 }</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
@@ -1851,14 +1660,15 @@ ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
 l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 /texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/tex
-live/2017/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texlive/2
-017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-
-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts
-/type1/urw/times/utmri8a.pfb>
-Output written on cic-tc.pdf (30 pages, 880769 bytes).
+live/2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/local/texli
+ve/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/te
+xmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/f
+onts/type1/urw/times/utmri8a.pfb>
+Output written on cic-tc.pdf (30 pages, 883264 bytes).
 PDF statistics:
- 452 PDF objects out of 1000 (max. 8388607)
- 393 compressed objects within 4 object streams
+ 456 PDF objects out of 1000 (max. 8388607)
+ 396 compressed objects within 4 object streams
  91 named destinations out of 1000 (max. 500000)
  277 words of extra memory for PDF output out of 10000 (max. 10000000)
 
