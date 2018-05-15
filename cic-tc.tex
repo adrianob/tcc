@@ -80,27 +80,11 @@
 % \renewcommand{\nominataChefeINT}{Prof.~Leila Ribeiro}
 % \renewcommand{\nominataChefeINTname}{Chefe do \deptINT}
 
-% A seguir são apresentados comandos específicos para alguns
-% tipos de documentos.
-
-% Relatório de Pesquisa [rp]:
-% \rp{123}             % numero do rp
-% \financ{CNPq, CAPES} % orgaos financiadores
-
-% Trabalho Individual [ti]:
-% \ti{123}     % numero do TI
-% \ti[II]{456} % no caso de ser o segundo TI
-
-% Monografias de Especialização [espec]:
-% \espec{Redes e Sistemas Distribuídos}      % nome do curso
-% \coord[Profa.~Dra.]{Weber}{Taisy da Silva} % coordenador do curso
-% \dept{INA}                                 % departamento relacionado
-
 % 
 % palavras-chave
 % iniciar todas com letras minúsculas, exceto no caso de abreviaturas
-% 
-\keyword{UFRGS}
+%
+\keyword{machine learning}
 \keyword{recommender systems}
 \keyword{AI}
 \keyword{crowdfunding}
@@ -129,9 +113,14 @@
 \end{flushright}
 
 % agradecimentos
-%\chapter*{Agradecimentos}
+\chapter*{Acknowledgments}
 %Agradeço ao \LaTeX\ por não ter vírus de macro\ldots
-
+\begin{abstract}
+    Abstract.
+\end{abstract}
+\begin{abstract}{Uma comparação de sistema de recomendação para projetos de financiamento coletivo}
+   Resumo
+\end{abstract}
 
 %% \centering
 %% \parbox{\longest}{%
@@ -435,18 +424,19 @@ The dataset used for the Collaborative Filtering model is a simple list of User 
 \section{Evaluation Metrics}
 There are basically 3 ways RSs can be evaluated: offline, online and empirically. Offline measures are those computed based on a given static dataset, generally through techniques such as split validation and cross-validation. In these techniques, a subset of the data is withheld to be later used for testing; metrics are then computed for the test set only. According to Herlocker et al. \cite{Herlocker2004}, offline metrics can be broadly classified into the following categories: predictive accuracy metrics, such as Mean Absolute Error (MAE) and its variations; classification accuracy metrics, such as precision, recall and F1-measure; rank accuracy metrics, such as Pearson’s product-moment correlation, and normalized distance-based performance metric (NDPM). For the sake of completeness, we will provide some of these metrics for each implemented algorithm, however it should be noted that offline metrics are not a good indicator as to how well a RS will actually perform, and trying to optimize for them may actually degrade real-life performance \cite{McNee2006}. To illustrate this point, let's think about a recommender system for movies. Suppose user Bob likes movies $A$, $B$ and $C$. We split our dataset in such a way that movies $A$ and $B$ will be in the train set, while movie $C$ is on the test set. Any kind of offline metric will test in a way or another if movie $C$ was recommended to user Bob, resulting in a higher score if it is recommended and a lower score if other, unrelated movies, are recommended. The problem is that an algorithm that recommends movies $D$ or $E$ could actually be much better than one that recommends movie $C$, a fact that no offline metric could account for. This can be fundamentally attributed to the fact that, unlike most classification problems, recommender systems work with extremely sparse matrices; this sort of validation strategy would only be valid if we knew the ratings given by the user for every item beforehand. Evidently, in this imaginary scenario a RS would be pointless in the first place, consequently, other evaluation strategies are required.
 
-Much more meaningful metrics can be obtained by online evaluation. While much more expensive and time-consuming to perform than offline measurements, live metrics are capable of testing directly whether the RS is achieving its intended purpose. The most common measures are the Click-Through Rate (CTR) and Conversion Rate (CR). CTR is defined as the ratio of users who click on a specific link to the number of users who viewed the page. In our case, if a set of $N$ recommendations is displayed $X$ times, let $Y$ be the number of times a user clicked on at least one of the recommended items in $N$. CTR is then defined as $Y/X$. For the CR, we require that not only the user click on a specific recommendation, but also back the project. To compare two different RSs in an online setting, the most prominent approach today is A/B-testing. For our experiment, a recommendation algorithm was randomly selected for each user and click-through and conversion rates were measured. This was done for 2 weeks on a live production environment with more than 20 thousand unique visitors per day.
+Much more meaningful metrics can be obtained by online evaluation. While much more expensive and time-consuming to perform than offline measurements, live metrics are capable of testing directly whether the RS is achieving its intended purpose. The most common measures are the Click-Through Rate (CTR) and Conversion Rate (CR). CTR is defined as the ratio of users who click on a specific link to the number of users who viewed the page. In our case, if a set of $N$ recommendations is displayed $X$ times, let $Y$ be the number of times a user clicked on at least one of the recommended items in $N$. CTR is then defined as $Y/X$. For the CR, we require that not only the user click on a specific recommendation, but also back the project. To compare two different RSs in an online setting, the most prominent approach today is A/B-testing. Since our experiment consists of 3 different approaches, an A/B/C test was done. For our experiment, a recommendation algorithm was randomly selected for each user and click-through and conversion rates were measured by adding a reference header to projects that were accessed through the recommendations page.
 
-Finally, empirical evaluation - having a person actually look at the results - is equally important in any business setting. Consider a news portal that implemented a RS for its front page news. The RS might start recommending articles about cute cats, which might very well provide higher click-through rates than its more serious articles. This, however, is probably not what the company had in mind, and such a change in content might hurt the company's reputation in the long run. It is thus paramount to perform sanity checks on recommendation results manually. To achieve this, a test page with each proposed algorithm along with the existing popularity ranking was made available and a survey was sent to 14 members of the Catarse team. The following questions were asked:
+Finally, empirical evaluation - having a person actually look at the results - is equally important in any business setting. Consider a news portal that implemented a RS for its front page news. The RS might start recommending articles about cute cats, which might very well provide higher click-through rates than its more serious articles. This, however, is probably not what the company had in mind, and such a change in content might hurt the company's reputation in the long run. It is thus paramount to perform sanity checks on recommendation results manually. To achieve this, a test page with each proposed algorithm was made available and a survey was sent to 14 members of the Catarse team. The following questions were asked about each algorithm:
 
 \begin{itemize}
-    \item \emph{1}: Of the available algorithms, which one do you feel gave the best recommendations?
-    \item \emph{2}: Of the available algorithms, which one showed projects you would most likely back?
-    \item \emph{3}: Of the available algorithms, which one gave the most surprising recommendations?
-    \item \emph{4}: Of the available algorithms, which one would you use more often?
-    \item \emph{5}: General observations
+    \item \emph{1}: What is your level of satisfaction with this algorithm?
+    \item \emph{2}: How would you classify this algorithm with respect to the following properties(5 ratings from very unsatisfied to very satisfied)?
+    \begin {itemize}
+    \item 2.1: This algorithm showed me projects I would back
+    \item 2.1: This algorithm showed me projects I didn't know about
+    \item 2.1: This algorithm positively surprised me 
+    \end{itemize}
 \end{itemize}
-
 
 \section{Recommending projects}
 Catarse's dataset is unique in a variety of ways that makes collaborative filtering techniques hard to apply. Firstly, unlike regular e-commerce Web sites such as Amazon where products stay available for many years, crowdfunding projects have a predetermined cutoff date, after which it's no longer possible to make a pledge. It makes no sense to recommend expired projects, limiting our possible recommendations to online projects only. Another challenge is the fact that the majority of Catarse's users only back one project, making it hard to get enough data for CF methods to work properly. Another characteristic of CF systems is that they must be retrained for every new interaction, imposing scalability challenges when implemented on highly dynamic data. Our best choice is then to use content-based methods, this allows us to train our model with the whole dataset to extract backer-project features, and later use this model to search for online projects with the highest backing probability for the current user.
@@ -545,27 +535,45 @@ The Recall@N metric evaluates whether an item the user has rated in the past is 
           Collaborative Filtering     & 0.08933075             & $0.9329^*$  & 0.010246\\
           Hybrid     & 0.08933075             & Val 3  & 0.010246\\
           \hline
-        \end{tabular}
+        \end{tabular}`
     \label{tbl:offline_metrics}
 \end{table}
 
-\chapter{Conclusion}
-% \chapter{Estado da arte}
-% \chapter{Mais estado da arte}
-% \chapter{A minha contribuição}
-% \chapter{Prova de que a minha contribuição é válida}
+\section{Empirical evaluation} \label{empirical-evaluation}
+The results on table ~\ref{tbl:survey-results} were obtained by sending a survey to each member of Catarse's team. Respondents were asked to test each available algorithm while logged in with their accounts and answer several questions about each of them. To avoid bias, respondents were not given any details about the algorithms, which were labeled simply as 1, 2 and 3 to avoid identification. Five ratings were available for each question, from very unsatisfied to very satisfied. These rating were mapped to a 1-5 scale in order to obtain an average rating for each proposed question. It must be noted that, although this survey was aimed at people with vast knowledge and experience about crowdfunding projects, their recommendation results do not necessarily match those of a regular user. This is due to the fact that most site admins have backed hundreds of projects in order to test new features or while trying to reproduce bugs, which could greatly skew results since those projects are not necessarily the kind of projects they would normally back. To remove these outliers, only survey results of users with less than a 100 contributions were considered. 
+\begin{table}[]
+\centering
+\caption{Survey Results}
+\label{tbl:survey-results}
+\begin{tabular}{llll}
+\hline
+\multicolumn{1}{|l|}{}                                                        & \multicolumn{1}{l|}{CF} & \multicolumn{1}{l|}{CB} & \multicolumn{1}{l|}{Hybrid} \\ \hline
+\multicolumn{1}{|l|}{What is your level of satisfaction with this algorithm?} & \multicolumn{1}{l|}{$3.8\pm 0.4$}  & \multicolumn{1}{l|}{$3.3 \pm 0.5$}  & \multicolumn{1}{l|}{$4.0 \pm 0.5$}      \\ \hline
+\multicolumn{1}{|l|}{This algorithm showed me projects I would back}          & \multicolumn{1}{l|}{$4.4 \pm 0.5$}  & \multicolumn{1}{l|}{$3.6 \pm 0.5$}  & \multicolumn{1}{l|}{$3.7 \pm 1.3$}      \\ \hline
+\multicolumn{1}{|l|}{This algorithm showed me projects I didn't know about}   & \multicolumn{1}{l|}{$4.1 \pm 1.0$}  & \multicolumn{1}{l|}{$3.5 \pm 1.2$}  & \multicolumn{1}{l|}{$4.7 \pm 0.2$}      \\ \hline
+\multicolumn{1}{|l|}{This algorithm positively surprised me}   & \multicolumn{1}{l|}{$3.4 \pm 1.1$}  & \multicolumn{1}{l|}{$3.5 \pm 0.6$}  & \multicolumn{1}{l|}{$4.0 \pm 1.7$}      \\ \hline
+\end{tabular}
+\end{table}
 
-% referências
-% aqui será usado o environment padrao `thebibliography'; porém, sugere-se
-% seriamente o uso de BibTeX e do estilo abnt.bst (veja na página do
-% UTUG)
-% 
-% observe também o estilo meio estranho de alguns labels; isso é
-% devido ao uso do pacote `natbib', que permite fazer citações de
-% autores, ano, e diversas combinações desses
+As expected, Hybrid recommendation results were the highest rated on average. Again as expected, the Collaborative Filtering approach gave more diversified results compared to the content-based approach, although, interestingly, Hybrid recommendations gave even more serendipitous recommendations. 
+
+One common complaint about the recommendation results was that "dead" projects, that is, projects who haven't received any contributions for a long time, were being highly recommended in some cases. Indeed, since our dataset only includes data that is available in the first 3 days of the project's lifetime, it is possible that a project that received many contributions in its launch but flattened out later would be highly recommended. This is especially a problem for flexible projects, which can stay online for up to a year. The Content-Based algorithm was also criticized for prioritizing highly popular projects over a list more tailored for the user. This is to be expected since the pledged amount was one of the most significant features in our ensemble model.
+
+Collaborative results were much better than expected given the general characteristics of the dataset, but we must take into account the fact that most team members have backed on average much more projects than the average user, thus making them great targets for CF. 
+
+The last two questions, which were intended to measure novelty and serendipity respectively, showed the highest variation in the survey. This can be attributed to differences in familiarity with current projects amongst different team members. Members of the support team, for example, were more likely to be aware of the recommended projects than members of the financial team.
+
+An additional general observations field was made available for each proposed algorithm. Reading these comments it is interesting to notice that, even though users didn't know which algorithm they were evaluating, their comments match exactly the expected characteristics of each approach, further confirming the fact that these differences in characteristics are obvious even to non-technical users.
+
+\section{Online evaluation}
+Online results were obtained by randomly assigning a recommendation algorithm for each user that visited the Explore Projects page. This was done for 1 week on a live production environment with more than 20 thousand unique visitors per day.
+
+It is known that the chance of obtaining a false positive increases with the number of variations tested. This probability is given by the formula $1-(1-a)^m$, with $m$ being the total number of variations tested and $a$ being the significance level, which gives us a false positive probability of $14\%$ when $m=3$ and $a=0.05$. To correct this, we compute a new required confidence level by applying the Bonferroni correction, which calculates the confidence level for a test with more than one variation. This correction simply divides our desired significance level by the number of variations,  thus giving us a new required significance of $0.05/3=0.016$, or, equivalently, a required confidence level of $98.3\%$.
+\chapter{Conclusion}
+\section{Future Work}
+A number of improvements can be made to the current implementation. Firstly, for the Content-Based algorithm, new features can be added to improve its prediction power. More specifically, instead of only considering the length of the project's description we can analyze its content by using techniques such as Latent Dirichlet Allocation (LDA) or TF-IDF, and use the results from this analysis as features for our model. Secondly, time-aware features can be used to alleviate problems such as abandoned projects, which were described in section \ref{empirical-evaluation}, being shown. Finally, Hybrid recommendations can be further tuned by giving different weights to each algorithm, thus placing a higher emphasis in one of them.
 
 \bibliographystyle{abntex2-alf}
 \bibliography{cic-tc}{}
 
 \end{document}
-
