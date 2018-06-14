@@ -3,16 +3,21 @@
 \select@language {english}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\select@language {brazilian}
+\addvspace {10\p@ }
+\select@language {english}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Overview of collaborative filtering techniques.}}{17}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces GbTree example}}{19}{figure.3.2}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Feature importance in Gradient Boosting Tree}}{26}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Dependence plot for category\_count}}{26}{figure.5.2}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Overview of collaborative filtering techniques.}}{26}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces GbTree example}}{28}{figure.3.2}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Feature importance in Gradient Boosting Tree}}{38}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Dependence plot for category\_count \leavevmode {\color {red}\textbf {nao \IeC {\'e} claro o que esse grafico esta mostrando}}}}{38}{figure.5.2}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

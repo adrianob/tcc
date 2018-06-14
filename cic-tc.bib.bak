@@ -53,11 +53,12 @@
 @Article{Li2012,
   author      = {Ping Li},
   title       = {Robust LogitBoost and Adaptive Base Class (ABC) LogitBoost},
-  abstract    = {Logitboost is an influential boosting algorithm for classification. In this paper, we develop robust logitboost to provide an explicit formulation of tree-split criterion for building weak learners (regression trees) for logitboost. This formulation leads to a numerically stable implementation of logitboost. We then propose abc-logitboost for multi-class classification, by combining robust logitboost with the prior work of abc-boost. Previously, abc-boost was implemented as abc-mart using the mart algorithm. Our extensive experiments on multi-class classification compare four algorithms: mart, abcmart, (robust) logitboost, and abc-logitboost, and demonstrate the superiority of abc-logitboost. Comparisons with other learning methods including SVM and deep learning are also available through prior publications.},
+  year        = {2012},
   date        = {2012-03-15},
   eprint      = {1203.3491v1},
   eprintclass = {cs.LG},
   eprinttype  = {arXiv},
+  abstract    = {Logitboost is an influential boosting algorithm for classification. In this paper, we develop robust logitboost to provide an explicit formulation of tree-split criterion for building weak learners (regression trees) for logitboost. This formulation leads to a numerically stable implementation of logitboost. We then propose abc-logitboost for multi-class classification, by combining robust logitboost with the prior work of abc-boost. Previously, abc-boost was implemented as abc-mart using the mart algorithm. Our extensive experiments on multi-class classification compare four algorithms: mart, abcmart, (robust) logitboost, and abc-logitboost, and demonstrate the superiority of abc-logitboost. Comparisons with other learning methods including SVM and deep learning are also available through prior publications.},
   file        = {online:http\://arxiv.org/pdf/1203.3491v1:PDF},
   keywords    = {cs.LG, stat.ML},
 }
@@ -147,4 +148,28 @@
   url       = {https://www.amazon.com/Recommender-Systems-Textbook-Charu-Aggarwal-ebook/dp/B01DK3GZDY?SubscriptionId=0JYN1NVW651KCA56C102&tag=techkie-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=B01DK3GZDY},
 }
 
-@Comment{jabref-meta: databaseType:bibtex;}
+@Book{N.N2010,
+  author    = {Francesco Ricci and Lior Rokach and Bracha Shapira and Paul Kantor},
+  title     = {Recommender Systems Handbook},
+  year      = {2010},
+  date      = {2010-10-21},
+  publisher = {Springer US},
+  url       = {https://www.ebook.de/de/product/16201811/n_n_recommender_systems_handbook.html},
+  ean       = {9780387858203},
+}
+
+@Unknown{unknown,
+  author = {Rakesh, Vineeth and Choo, Jaegul and Reddy, Chandan},
+  title  = {Project Recommendation using Heterogeneous Traits in Crowdfunding},
+  month  = {05},
+  year   = {2015},
+}
+
+@Online{,
+  author = {Tianqi Chen},
+  title  = {Introduction to Boosted Trees},
+  year   = {2014},
+  url    = {https://xgboost.readthedocs.io/en/latest/model.html},
+}
+
+@Comment{jabref-meta: databaseType:biblatex;}

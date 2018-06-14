@@ -36,9 +36,10 @@ ISBN 978-3-319-29659-3. Available from Internet:
   system. In:  \textbf{2008 Eighth International Conference on Hybrid
   Intelligent Systems}. [S.l.]: {IEEE}, 2008.}
 
-\bibitem[Li]{Li2012}
-\abntrefinfo{Li}{LI}{}
-{LI, P. Robust logitboost and adaptive base class (abc) logitboost.}
+\bibitem[Li 2012]{Li2012}
+\abntrefinfo{Li}{LI}{2012}
+{LI, P. Robust logitboost and adaptive base class (abc) logitboost.
+2012.}
 
 \bibitem[Linden, Smith and York 2003]{Linden2003}
 \abntrefinfo{Linden, Smith and York}{LINDEN; SMITH; YORK}{2003}
@@ -65,6 +66,12 @@ ISBN 978-3-319-29659-3. Available from Internet:
   for crowdfunding domains. In:  \textbf{Proceedings of the Ninth {ACM}
   International Conference on Web Search and Data Mining - {WSDM}
   {\textquotesingle}16}. [S.l.]: {ACM} Press, 2016.}
+
+\bibitem[Ricci et al. 2010]{N.N2010}
+\abntrefinfo{Ricci et al.}{RICCI et al.}{2010}
+{RICCI, F. et al. \textbf{Recommender Systems Handbook}. Springer US, 2010.
+  Available from Internet:
+  \url{https://www.ebook.de/de/product/16201811/n\_n\_recommender\_systems\_handbook.html}.}
 
 \bibitem[Sarwar et al. 2001]{Sarwar2001}
 \abntrefinfo{Sarwar et al.}{SARWAR et al.}{2001}
