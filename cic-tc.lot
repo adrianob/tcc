@@ -2,7 +2,6 @@
 \select@language {brazilian}
 \select@language {english}
 \addvspace {10\p@ }
-\addvspace {10\p@ }
 \select@language {brazilian}
 \addvspace {10\p@ }
 \select@language {english}
@@ -11,16 +10,16 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {1.1}{\ignorespaces Example of recommended products by various real-world applications}}{12}{table.1.1}
+\contentsline {table}{\numberline {1.1}{\ignorespaces Example of recommended products by various real-world applications}}{11}{table.1.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Content-Based Offline metrics \leavevmode {\color {red}\textbf {arrumar centralizacao}}}}{38}{table.5.1}
-\contentsline {table}{\numberline {5.2}{\ignorespaces Collaborative Filtering Offline metrics \leavevmode {\color {red}\textbf {que que \IeC {\'e} o recall@x? Explicar no texto o que \IeC {\'e} o 'x'.}} \leavevmode {\color {blue}\textbf {coloquei no capitulo de metricas}}}}{40}{table.5.2}
-\contentsline {table}{\numberline {5.3}{\ignorespaces Offline metrics}}{41}{table.5.3}
-\contentsline {table}{\numberline {5.4}{\ignorespaces Online results}}{42}{table.5.4}
-\contentsline {table}{\numberline {5.5}{\ignorespaces Number of distinct projects who received pledges}}{43}{table.5.5}
-\contentsline {table}{\numberline {5.6}{\ignorespaces Survey Results}}{44}{table.5.6}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Content-Based Offline metrics}}{35}{table.5.1}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Collaborative Filtering Offline metrics}}{36}{table.5.2}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Offline metrics of different RS approaches}}{37}{table.5.3}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Online results of differente RS approaches}}{39}{table.5.4}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Number of distinct projects which received pledges}}{40}{table.5.5}
+\contentsline {table}{\numberline {5.6}{\ignorespaces Survey Results of different RS approaches}}{40}{table.5.6}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
